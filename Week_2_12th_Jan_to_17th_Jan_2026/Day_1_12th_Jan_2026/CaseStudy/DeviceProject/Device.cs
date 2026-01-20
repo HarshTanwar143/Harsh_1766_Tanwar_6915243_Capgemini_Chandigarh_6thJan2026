@@ -2,6 +2,20 @@
 {
     internal class Device
     {
+        public enum DeviceCategory
+        {
+            Laptop,
+            Tablet,
+            Mobile
+        }
+
+        public struct Specification
+        {
+            public int Ram;
+            public int Storage;
+            public int Ports;
+        }
+
         public const string Company = "TechWorld";
         public static int DeviceCount;
         public readonly string serialNumber;

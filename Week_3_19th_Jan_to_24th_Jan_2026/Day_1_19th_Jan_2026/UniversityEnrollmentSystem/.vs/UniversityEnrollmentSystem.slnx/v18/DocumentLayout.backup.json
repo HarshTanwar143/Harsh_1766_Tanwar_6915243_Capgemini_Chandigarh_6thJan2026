@@ -1,0 +1,139 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_3_19th_Jan_to_24th_Jan_2026\\Day_1_19th_Jan_2026\\UniversityEnrollmentSystem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BB7B4623-C3FD-4F0E-ABD1-C4D663FC8D1C}|UniversityEnrollmentSystem.csproj|e:\\capegemini_cu_sec3_netcoreazure_harsh_tanwar\\week_3_19th_jan_to_24th_jan_2026\\day_1_19th_jan_2026\\universityenrollmentsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB7B4623-C3FD-4F0E-ABD1-C4D663FC8D1C}|UniversityEnrollmentSystem.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB7B4623-C3FD-4F0E-ABD1-C4D663FC8D1C}|UniversityEnrollmentSystem.csproj|e:\\capegemini_cu_sec3_netcoreazure_harsh_tanwar\\week_3_19th_jan_to_24th_jan_2026\\day_1_19th_jan_2026\\universityenrollmentsystem\\staff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB7B4623-C3FD-4F0E-ABD1-C4D663FC8D1C}|UniversityEnrollmentSystem.csproj|solutionrelative:staff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB7B4623-C3FD-4F0E-ABD1-C4D663FC8D1C}|UniversityEnrollmentSystem.csproj|e:\\capegemini_cu_sec3_netcoreazure_harsh_tanwar\\week_3_19th_jan_to_24th_jan_2026\\day_1_19th_jan_2026\\universityenrollmentsystem\\professor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB7B4623-C3FD-4F0E-ABD1-C4D663FC8D1C}|UniversityEnrollmentSystem.csproj|solutionrelative:professor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB7B4623-C3FD-4F0E-ABD1-C4D663FC8D1C}|UniversityEnrollmentSystem.csproj|e:\\capegemini_cu_sec3_netcoreazure_harsh_tanwar\\week_3_19th_jan_to_24th_jan_2026\\day_1_19th_jan_2026\\universityenrollmentsystem\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB7B4623-C3FD-4F0E-ABD1-C4D663FC8D1C}|UniversityEnrollmentSystem.csproj|solutionrelative:student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB7B4623-C3FD-4F0E-ABD1-C4D663FC8D1C}|UniversityEnrollmentSystem.csproj|e:\\capegemini_cu_sec3_netcoreazure_harsh_tanwar\\week_3_19th_jan_to_24th_jan_2026\\day_1_19th_jan_2026\\universityenrollmentsystem\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB7B4623-C3FD-4F0E-ABD1-C4D663FC8D1C}|UniversityEnrollmentSystem.csproj|solutionrelative:person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB7B4623-C3FD-4F0E-ABD1-C4D663FC8D1C}|UniversityEnrollmentSystem.csproj|e:\\capegemini_cu_sec3_netcoreazure_harsh_tanwar\\week_3_19th_jan_to_24th_jan_2026\\day_1_19th_jan_2026\\universityenrollmentsystem\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB7B4623-C3FD-4F0E-ABD1-C4D663FC8D1C}|UniversityEnrollmentSystem.csproj|solutionrelative:course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB7B4623-C3FD-4F0E-ABD1-C4D663FC8D1C}|UniversityEnrollmentSystem.csproj|e:\\capegemini_cu_sec3_netcoreazure_harsh_tanwar\\week_3_19th_jan_to_24th_jan_2026\\day_1_19th_jan_2026\\universityenrollmentsystem\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB7B4623-C3FD-4F0E-ABD1-C4D663FC8D1C}|UniversityEnrollmentSystem.csproj|solutionrelative:department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Staff.cs",
+              "DocumentMoniker": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_3_19th_Jan_to_24th_Jan_2026\\Day_1_19th_Jan_2026\\UniversityEnrollmentSystem\\Staff.cs",
+              "RelativeDocumentMoniker": "Staff.cs",
+              "ToolTip": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_3_19th_Jan_to_24th_Jan_2026\\Day_1_19th_Jan_2026\\UniversityEnrollmentSystem\\Staff.cs",
+              "RelativeToolTip": "Staff.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-19T18:11:49.107Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Professor.cs",
+              "DocumentMoniker": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_3_19th_Jan_to_24th_Jan_2026\\Day_1_19th_Jan_2026\\UniversityEnrollmentSystem\\Professor.cs",
+              "RelativeDocumentMoniker": "Professor.cs",
+              "ToolTip": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_3_19th_Jan_to_24th_Jan_2026\\Day_1_19th_Jan_2026\\UniversityEnrollmentSystem\\Professor.cs",
+              "RelativeToolTip": "Professor.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAwwAwAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-19T18:10:37.705Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Student.cs",
+              "DocumentMoniker": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_3_19th_Jan_to_24th_Jan_2026\\Day_1_19th_Jan_2026\\UniversityEnrollmentSystem\\Student.cs",
+              "RelativeDocumentMoniker": "Student.cs",
+              "ToolTip": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_3_19th_Jan_to_24th_Jan_2026\\Day_1_19th_Jan_2026\\UniversityEnrollmentSystem\\Student.cs",
+              "RelativeToolTip": "Student.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-19T18:09:29.596Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Person.cs",
+              "DocumentMoniker": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_3_19th_Jan_to_24th_Jan_2026\\Day_1_19th_Jan_2026\\UniversityEnrollmentSystem\\Person.cs",
+              "RelativeDocumentMoniker": "Person.cs",
+              "ToolTip": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_3_19th_Jan_to_24th_Jan_2026\\Day_1_19th_Jan_2026\\UniversityEnrollmentSystem\\Person.cs",
+              "RelativeToolTip": "Person.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-19T18:08:31.036Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Course.cs",
+              "DocumentMoniker": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_3_19th_Jan_to_24th_Jan_2026\\Day_1_19th_Jan_2026\\UniversityEnrollmentSystem\\Course.cs",
+              "RelativeDocumentMoniker": "Course.cs",
+              "ToolTip": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_3_19th_Jan_to_24th_Jan_2026\\Day_1_19th_Jan_2026\\UniversityEnrollmentSystem\\Course.cs",
+              "RelativeToolTip": "Course.cs",
+              "ViewState": "AgIAAAYAAABgZmZmZmYkwA8AAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-19T18:07:33.23Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Department.cs",
+              "DocumentMoniker": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_3_19th_Jan_to_24th_Jan_2026\\Day_1_19th_Jan_2026\\UniversityEnrollmentSystem\\Department.cs",
+              "RelativeDocumentMoniker": "Department.cs",
+              "ToolTip": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_3_19th_Jan_to_24th_Jan_2026\\Day_1_19th_Jan_2026\\UniversityEnrollmentSystem\\Department.cs",
+              "RelativeToolTip": "Department.cs",
+              "ViewState": "AgIAAAAAAAAwMzMzMzMXwAsAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-19T18:06:19.821Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_3_19th_Jan_to_24th_Jan_2026\\Day_1_19th_Jan_2026\\UniversityEnrollmentSystem\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_3_19th_Jan_to_24th_Jan_2026\\Day_1_19th_Jan_2026\\UniversityEnrollmentSystem\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAIAAAAAMjMzMzMbwAwAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-19T18:05:01.429Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

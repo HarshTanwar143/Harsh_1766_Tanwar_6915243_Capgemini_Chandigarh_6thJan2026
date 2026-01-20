@@ -1,0 +1,139 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_3_19th_Jan_to_24th_Jan_2026\\Day_1_19th_Jan_2026\\VehicleRentalSystem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{95AD4E5C-4734-4172-AAE9-F0EE1835D44D}|VehicleRentalSystem.csproj|e:\\capegemini_cu_sec3_netcoreazure_harsh_tanwar\\week_3_19th_jan_to_24th_jan_2026\\day_1_19th_jan_2026\\vehiclerentalsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95AD4E5C-4734-4172-AAE9-F0EE1835D44D}|VehicleRentalSystem.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95AD4E5C-4734-4172-AAE9-F0EE1835D44D}|VehicleRentalSystem.csproj|e:\\capegemini_cu_sec3_netcoreazure_harsh_tanwar\\week_3_19th_jan_to_24th_jan_2026\\day_1_19th_jan_2026\\vehiclerentalsystem\\rentaltransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95AD4E5C-4734-4172-AAE9-F0EE1835D44D}|VehicleRentalSystem.csproj|solutionrelative:rentaltransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95AD4E5C-4734-4172-AAE9-F0EE1835D44D}|VehicleRentalSystem.csproj|e:\\capegemini_cu_sec3_netcoreazure_harsh_tanwar\\week_3_19th_jan_to_24th_jan_2026\\day_1_19th_jan_2026\\vehiclerentalsystem\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95AD4E5C-4734-4172-AAE9-F0EE1835D44D}|VehicleRentalSystem.csproj|solutionrelative:customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95AD4E5C-4734-4172-AAE9-F0EE1835D44D}|VehicleRentalSystem.csproj|e:\\capegemini_cu_sec3_netcoreazure_harsh_tanwar\\week_3_19th_jan_to_24th_jan_2026\\day_1_19th_jan_2026\\vehiclerentalsystem\\truck.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95AD4E5C-4734-4172-AAE9-F0EE1835D44D}|VehicleRentalSystem.csproj|solutionrelative:truck.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95AD4E5C-4734-4172-AAE9-F0EE1835D44D}|VehicleRentalSystem.csproj|e:\\capegemini_cu_sec3_netcoreazure_harsh_tanwar\\week_3_19th_jan_to_24th_jan_2026\\day_1_19th_jan_2026\\vehiclerentalsystem\\bike.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95AD4E5C-4734-4172-AAE9-F0EE1835D44D}|VehicleRentalSystem.csproj|solutionrelative:bike.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95AD4E5C-4734-4172-AAE9-F0EE1835D44D}|VehicleRentalSystem.csproj|e:\\capegemini_cu_sec3_netcoreazure_harsh_tanwar\\week_3_19th_jan_to_24th_jan_2026\\day_1_19th_jan_2026\\vehiclerentalsystem\\car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95AD4E5C-4734-4172-AAE9-F0EE1835D44D}|VehicleRentalSystem.csproj|solutionrelative:car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95AD4E5C-4734-4172-AAE9-F0EE1835D44D}|VehicleRentalSystem.csproj|e:\\capegemini_cu_sec3_netcoreazure_harsh_tanwar\\week_3_19th_jan_to_24th_jan_2026\\day_1_19th_jan_2026\\vehiclerentalsystem\\vehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95AD4E5C-4734-4172-AAE9-F0EE1835D44D}|VehicleRentalSystem.csproj|solutionrelative:vehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RentalTransaction.cs",
+              "DocumentMoniker": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_3_19th_Jan_to_24th_Jan_2026\\Day_1_19th_Jan_2026\\VehicleRentalSystem\\RentalTransaction.cs",
+              "RelativeDocumentMoniker": "RentalTransaction.cs",
+              "ToolTip": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_3_19th_Jan_to_24th_Jan_2026\\Day_1_19th_Jan_2026\\VehicleRentalSystem\\RentalTransaction.cs",
+              "RelativeToolTip": "RentalTransaction.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-19T18:24:18.745Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Customer.cs",
+              "DocumentMoniker": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_3_19th_Jan_to_24th_Jan_2026\\Day_1_19th_Jan_2026\\VehicleRentalSystem\\Customer.cs",
+              "RelativeDocumentMoniker": "Customer.cs",
+              "ToolTip": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_3_19th_Jan_to_24th_Jan_2026\\Day_1_19th_Jan_2026\\VehicleRentalSystem\\Customer.cs",
+              "RelativeToolTip": "Customer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-19T18:23:45.723Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Truck.cs",
+              "DocumentMoniker": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_3_19th_Jan_to_24th_Jan_2026\\Day_1_19th_Jan_2026\\VehicleRentalSystem\\Truck.cs",
+              "RelativeDocumentMoniker": "Truck.cs",
+              "ToolTip": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_3_19th_Jan_to_24th_Jan_2026\\Day_1_19th_Jan_2026\\VehicleRentalSystem\\Truck.cs",
+              "RelativeToolTip": "Truck.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-19T18:23:11.018Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Bike.cs",
+              "DocumentMoniker": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_3_19th_Jan_to_24th_Jan_2026\\Day_1_19th_Jan_2026\\VehicleRentalSystem\\Bike.cs",
+              "RelativeDocumentMoniker": "Bike.cs",
+              "ToolTip": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_3_19th_Jan_to_24th_Jan_2026\\Day_1_19th_Jan_2026\\VehicleRentalSystem\\Bike.cs",
+              "RelativeToolTip": "Bike.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-19T18:22:40.386Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Car.cs",
+              "DocumentMoniker": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_3_19th_Jan_to_24th_Jan_2026\\Day_1_19th_Jan_2026\\VehicleRentalSystem\\Car.cs",
+              "RelativeDocumentMoniker": "Car.cs",
+              "ToolTip": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_3_19th_Jan_to_24th_Jan_2026\\Day_1_19th_Jan_2026\\VehicleRentalSystem\\Car.cs",
+              "RelativeToolTip": "Car.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-19T18:21:14.369Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Vehicle.cs",
+              "DocumentMoniker": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_3_19th_Jan_to_24th_Jan_2026\\Day_1_19th_Jan_2026\\VehicleRentalSystem\\Vehicle.cs",
+              "RelativeDocumentMoniker": "Vehicle.cs",
+              "ToolTip": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_3_19th_Jan_to_24th_Jan_2026\\Day_1_19th_Jan_2026\\VehicleRentalSystem\\Vehicle.cs",
+              "RelativeToolTip": "Vehicle.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-19T18:17:58.871Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_3_19th_Jan_to_24th_Jan_2026\\Day_1_19th_Jan_2026\\VehicleRentalSystem\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_3_19th_Jan_to_24th_Jan_2026\\Day_1_19th_Jan_2026\\VehicleRentalSystem\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAxwAcAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-19T18:15:39.89Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_3_19th_Jan_to_24th_Jan_2026\\Day_1_19th_Jan_2026\\HospitalManagementSystem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{01310C31-FD2F-4FE4-9243-F169FFF1D051}|HospitalManagementSystem.csproj|e:\\capegemini_cu_sec3_netcoreazure_harsh_tanwar\\week_3_19th_jan_to_24th_jan_2026\\day_1_19th_jan_2026\\hospitalmanagementsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01310C31-FD2F-4FE4-9243-F169FFF1D051}|HospitalManagementSystem.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01310C31-FD2F-4FE4-9243-F169FFF1D051}|HospitalManagementSystem.csproj|e:\\capegemini_cu_sec3_netcoreazure_harsh_tanwar\\week_3_19th_jan_to_24th_jan_2026\\day_1_19th_jan_2026\\hospitalmanagementsystem\\medicalrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01310C31-FD2F-4FE4-9243-F169FFF1D051}|HospitalManagementSystem.csproj|solutionrelative:medicalrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01310C31-FD2F-4FE4-9243-F169FFF1D051}|HospitalManagementSystem.csproj|e:\\capegemini_cu_sec3_netcoreazure_harsh_tanwar\\week_3_19th_jan_to_24th_jan_2026\\day_1_19th_jan_2026\\hospitalmanagementsystem\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01310C31-FD2F-4FE4-9243-F169FFF1D051}|HospitalManagementSystem.csproj|solutionrelative:appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01310C31-FD2F-4FE4-9243-F169FFF1D051}|HospitalManagementSystem.csproj|e:\\capegemini_cu_sec3_netcoreazure_harsh_tanwar\\week_3_19th_jan_to_24th_jan_2026\\day_1_19th_jan_2026\\hospitalmanagementsystem\\nurse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01310C31-FD2F-4FE4-9243-F169FFF1D051}|HospitalManagementSystem.csproj|solutionrelative:nurse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01310C31-FD2F-4FE4-9243-F169FFF1D051}|HospitalManagementSystem.csproj|e:\\capegemini_cu_sec3_netcoreazure_harsh_tanwar\\week_3_19th_jan_to_24th_jan_2026\\day_1_19th_jan_2026\\hospitalmanagementsystem\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01310C31-FD2F-4FE4-9243-F169FFF1D051}|HospitalManagementSystem.csproj|solutionrelative:doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01310C31-FD2F-4FE4-9243-F169FFF1D051}|HospitalManagementSystem.csproj|e:\\capegemini_cu_sec3_netcoreazure_harsh_tanwar\\week_3_19th_jan_to_24th_jan_2026\\day_1_19th_jan_2026\\hospitalmanagementsystem\\patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01310C31-FD2F-4FE4-9243-F169FFF1D051}|HospitalManagementSystem.csproj|solutionrelative:patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01310C31-FD2F-4FE4-9243-F169FFF1D051}|HospitalManagementSystem.csproj|e:\\capegemini_cu_sec3_netcoreazure_harsh_tanwar\\week_3_19th_jan_to_24th_jan_2026\\day_1_19th_jan_2026\\hospitalmanagementsystem\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01310C31-FD2F-4FE4-9243-F169FFF1D051}|HospitalManagementSystem.csproj|solutionrelative:person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MedicalRecord.cs",
+              "DocumentMoniker": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_3_19th_Jan_to_24th_Jan_2026\\Day_1_19th_Jan_2026\\HospitalManagementSystem\\MedicalRecord.cs",
+              "RelativeDocumentMoniker": "MedicalRecord.cs",
+              "ToolTip": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_3_19th_Jan_to_24th_Jan_2026\\Day_1_19th_Jan_2026\\HospitalManagementSystem\\MedicalRecord.cs",
+              "RelativeToolTip": "MedicalRecord.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-19T18:52:30.941Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Appointment.cs",
+              "DocumentMoniker": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_3_19th_Jan_to_24th_Jan_2026\\Day_1_19th_Jan_2026\\HospitalManagementSystem\\Appointment.cs",
+              "RelativeDocumentMoniker": "Appointment.cs",
+              "ToolTip": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_3_19th_Jan_to_24th_Jan_2026\\Day_1_19th_Jan_2026\\HospitalManagementSystem\\Appointment.cs",
+              "RelativeToolTip": "Appointment.cs",
+              "ViewState": "AgIAAAwAAADAzMzMzMw6wBEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-19T18:51:37.392Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Nurse.cs",
+              "DocumentMoniker": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_3_19th_Jan_to_24th_Jan_2026\\Day_1_19th_Jan_2026\\HospitalManagementSystem\\Nurse.cs",
+              "RelativeDocumentMoniker": "Nurse.cs",
+              "ToolTip": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_3_19th_Jan_to_24th_Jan_2026\\Day_1_19th_Jan_2026\\HospitalManagementSystem\\Nurse.cs",
+              "RelativeToolTip": "Nurse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-19T18:51:05.123Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Doctor.cs",
+              "DocumentMoniker": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_3_19th_Jan_to_24th_Jan_2026\\Day_1_19th_Jan_2026\\HospitalManagementSystem\\Doctor.cs",
+              "RelativeDocumentMoniker": "Doctor.cs",
+              "ToolTip": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_3_19th_Jan_to_24th_Jan_2026\\Day_1_19th_Jan_2026\\HospitalManagementSystem\\Doctor.cs",
+              "RelativeToolTip": "Doctor.cs",
+              "ViewState": "AgIAAAIAAADAmJmZmZn5vwkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-19T18:48:47.559Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Patient.cs",
+              "DocumentMoniker": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_3_19th_Jan_to_24th_Jan_2026\\Day_1_19th_Jan_2026\\HospitalManagementSystem\\Patient.cs",
+              "RelativeDocumentMoniker": "Patient.cs",
+              "ToolTip": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_3_19th_Jan_to_24th_Jan_2026\\Day_1_19th_Jan_2026\\HospitalManagementSystem\\Patient.cs",
+              "RelativeToolTip": "Patient.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-19T18:48:00.054Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Person.cs",
+              "DocumentMoniker": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_3_19th_Jan_to_24th_Jan_2026\\Day_1_19th_Jan_2026\\HospitalManagementSystem\\Person.cs",
+              "RelativeDocumentMoniker": "Person.cs",
+              "ToolTip": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_3_19th_Jan_to_24th_Jan_2026\\Day_1_19th_Jan_2026\\HospitalManagementSystem\\Person.cs",
+              "RelativeToolTip": "Person.cs",
+              "ViewState": "AgIAAAkAAACgmZmZmZkdwBUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-19T18:44:26.381Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_3_19th_Jan_to_24th_Jan_2026\\Day_1_19th_Jan_2026\\HospitalManagementSystem\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_3_19th_Jan_to_24th_Jan_2026\\Day_1_19th_Jan_2026\\HospitalManagementSystem\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAQwCEAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-19T18:43:46.444Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

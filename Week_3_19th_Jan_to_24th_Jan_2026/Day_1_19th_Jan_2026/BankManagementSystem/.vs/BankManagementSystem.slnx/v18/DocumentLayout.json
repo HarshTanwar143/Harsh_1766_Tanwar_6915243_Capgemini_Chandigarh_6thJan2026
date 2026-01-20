@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_3_19th_Jan_to_24th_Jan_2026\\Day_1_19th_Jan_2026\\BankManagementSystem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D5E64E98-6634-48A2-9550-00BF7089D0F0}|BankManagementSystem.csproj|e:\\capegemini_cu_sec3_netcoreazure_harsh_tanwar\\week_3_19th_jan_to_24th_jan_2026\\day_1_19th_jan_2026\\bankmanagementsystem\\bankaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D5E64E98-6634-48A2-9550-00BF7089D0F0}|BankManagementSystem.csproj|solutionrelative:bankaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D5E64E98-6634-48A2-9550-00BF7089D0F0}|BankManagementSystem.csproj|e:\\capegemini_cu_sec3_netcoreazure_harsh_tanwar\\week_3_19th_jan_to_24th_jan_2026\\day_1_19th_jan_2026\\bankmanagementsystem\\savingsaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D5E64E98-6634-48A2-9550-00BF7089D0F0}|BankManagementSystem.csproj|solutionrelative:savingsaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D5E64E98-6634-48A2-9550-00BF7089D0F0}|BankManagementSystem.csproj|e:\\capegemini_cu_sec3_netcoreazure_harsh_tanwar\\week_3_19th_jan_to_24th_jan_2026\\day_1_19th_jan_2026\\bankmanagementsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D5E64E98-6634-48A2-9550-00BF7089D0F0}|BankManagementSystem.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D5E64E98-6634-48A2-9550-00BF7089D0F0}|BankManagementSystem.csproj|e:\\capegemini_cu_sec3_netcoreazure_harsh_tanwar\\week_3_19th_jan_to_24th_jan_2026\\day_1_19th_jan_2026\\bankmanagementsystem\\checkingaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D5E64E98-6634-48A2-9550-00BF7089D0F0}|BankManagementSystem.csproj|solutionrelative:checkingaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D5E64E98-6634-48A2-9550-00BF7089D0F0}|BankManagementSystem.csproj|e:\\capegemini_cu_sec3_netcoreazure_harsh_tanwar\\week_3_19th_jan_to_24th_jan_2026\\day_1_19th_jan_2026\\bankmanagementsystem\\businessaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D5E64E98-6634-48A2-9550-00BF7089D0F0}|BankManagementSystem.csproj|solutionrelative:businessaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BusinessAccount.cs",
+              "DocumentMoniker": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_3_19th_Jan_to_24th_Jan_2026\\Day_1_19th_Jan_2026\\BankManagementSystem\\BusinessAccount.cs",
+              "RelativeDocumentMoniker": "BusinessAccount.cs",
+              "ToolTip": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_3_19th_Jan_to_24th_Jan_2026\\Day_1_19th_Jan_2026\\BankManagementSystem\\BusinessAccount.cs",
+              "RelativeToolTip": "BusinessAccount.cs",
+              "ViewState": "AgIAABMAAADAzMzMzMwUwBoAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-19T07:01:09.094Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CheckingAccount.cs",
+              "DocumentMoniker": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_3_19th_Jan_to_24th_Jan_2026\\Day_1_19th_Jan_2026\\BankManagementSystem\\CheckingAccount.cs",
+              "RelativeDocumentMoniker": "CheckingAccount.cs",
+              "ToolTip": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_3_19th_Jan_to_24th_Jan_2026\\Day_1_19th_Jan_2026\\BankManagementSystem\\CheckingAccount.cs",
+              "RelativeToolTip": "CheckingAccount.cs",
+              "ViewState": "AgIAABEAAAAAMzMzMzPzvyAAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-19T06:59:33.519Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SavingsAccount.cs",
+              "DocumentMoniker": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_3_19th_Jan_to_24th_Jan_2026\\Day_1_19th_Jan_2026\\BankManagementSystem\\SavingsAccount.cs",
+              "RelativeDocumentMoniker": "SavingsAccount.cs",
+              "ToolTip": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_3_19th_Jan_to_24th_Jan_2026\\Day_1_19th_Jan_2026\\BankManagementSystem\\SavingsAccount.cs",
+              "RelativeToolTip": "SavingsAccount.cs",
+              "ViewState": "AgIAABMAAADAzMzMzMwuwBwAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-19T06:58:28.716Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BankAccount.cs",
+              "DocumentMoniker": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_3_19th_Jan_to_24th_Jan_2026\\Day_1_19th_Jan_2026\\BankManagementSystem\\BankAccount.cs",
+              "RelativeDocumentMoniker": "BankAccount.cs",
+              "ToolTip": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_3_19th_Jan_to_24th_Jan_2026\\Day_1_19th_Jan_2026\\BankManagementSystem\\BankAccount.cs",
+              "RelativeToolTip": "BankAccount.cs",
+              "ViewState": "AgIAADQAAADQzMzMzMwYwDsAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-19T06:56:43.792Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_3_19th_Jan_to_24th_Jan_2026\\Day_1_19th_Jan_2026\\BankManagementSystem\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_3_19th_Jan_to_24th_Jan_2026\\Day_1_19th_Jan_2026\\BankManagementSystem\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAA8AAABAZmZmZmYSwAoAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-19T06:48:29.043Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

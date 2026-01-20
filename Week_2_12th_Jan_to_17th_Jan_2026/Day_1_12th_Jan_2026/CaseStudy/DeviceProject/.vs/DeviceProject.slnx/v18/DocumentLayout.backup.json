@@ -3,24 +3,16 @@
   "WorkspaceRootPath": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_2_12th_Jan_to_17th_Jan_2026\\Day_1_12th_Jan_2026\\CaseStudy\\DeviceProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AD0DB5CA-3E76-1E4B-1D56-045F63D1BBA3}|DeviceProject.csproj|e:\\capegemini_cu_sec3_netcoreazure_harsh_tanwar\\week_2_12th_jan_to_17th_jan_2026\\day_1_12th_jan_2026\\casestudy\\deviceproject\\portabledevices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD0DB5CA-3E76-1E4B-1D56-045F63D1BBA3}|DeviceProject.csproj|solutionrelative:portabledevices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AD0DB5CA-3E76-1E4B-1D56-045F63D1BBA3}|DeviceProject.csproj|e:\\capegemini_cu_sec3_netcoreazure_harsh_tanwar\\week_2_12th_jan_to_17th_jan_2026\\day_1_12th_jan_2026\\casestudy\\deviceproject\\abstractwarranty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD0DB5CA-3E76-1E4B-1D56-045F63D1BBA3}|DeviceProject.csproj|solutionrelative:abstractwarranty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD0DB5CA-3E76-1E4B-1D56-045F63D1BBA3}|DeviceProject.csproj|e:\\capegemini_cu_sec3_netcoreazure_harsh_tanwar\\week_2_12th_jan_to_17th_jan_2026\\day_1_12th_jan_2026\\casestudy\\deviceproject\\devicewarranty .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD0DB5CA-3E76-1E4B-1D56-045F63D1BBA3}|DeviceProject.csproj|solutionrelative:devicewarranty .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AD0DB5CA-3E76-1E4B-1D56-045F63D1BBA3}|DeviceProject.csproj|e:\\capegemini_cu_sec3_netcoreazure_harsh_tanwar\\week_2_12th_jan_to_17th_jan_2026\\day_1_12th_jan_2026\\casestudy\\deviceproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AD0DB5CA-3E76-1E4B-1D56-045F63D1BBA3}|DeviceProject.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AD0DB5CA-3E76-1E4B-1D56-045F63D1BBA3}|DeviceProject.csproj|e:\\capegemini_cu_sec3_netcoreazure_harsh_tanwar\\week_2_12th_jan_to_17th_jan_2026\\day_1_12th_jan_2026\\casestudy\\deviceproject\\device.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD0DB5CA-3E76-1E4B-1D56-045F63D1BBA3}|DeviceProject.csproj|solutionrelative:device.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AD0DB5CA-3E76-1E4B-1D56-045F63D1BBA3}|DeviceProject.csproj|e:\\capegemini_cu_sec3_netcoreazure_harsh_tanwar\\week_2_12th_jan_to_17th_jan_2026\\day_1_12th_jan_2026\\casestudy\\deviceproject\\idevicespecification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD0DB5CA-3E76-1E4B-1D56-045F63D1BBA3}|DeviceProject.csproj|solutionrelative:idevicespecification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AD0DB5CA-3E76-1E4B-1D56-045F63D1BBA3}|DeviceProject.csproj|e:\\capegemini_cu_sec3_netcoreazure_harsh_tanwar\\week_2_12th_jan_to_17th_jan_2026\\day_1_12th_jan_2026\\casestudy\\deviceproject\\deviceoperationsinterface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD0DB5CA-3E76-1E4B-1D56-045F63D1BBA3}|DeviceProject.csproj|solutionrelative:deviceoperationsinterface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,71 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IDeviceSpecification.cs",
-              "DocumentMoniker": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_2_12th_Jan_to_17th_Jan_2026\\Day_1_12th_Jan_2026\\CaseStudy\\DeviceProject\\IDeviceSpecification.cs",
-              "RelativeDocumentMoniker": "IDeviceSpecification.cs",
-              "ToolTip": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_2_12th_Jan_to_17th_Jan_2026\\Day_1_12th_Jan_2026\\CaseStudy\\DeviceProject\\IDeviceSpecification.cs",
-              "RelativeToolTip": "IDeviceSpecification.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-16T09:01:54.533Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "DeviceOperationsInterface.cs",
-              "DocumentMoniker": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_2_12th_Jan_to_17th_Jan_2026\\Day_1_12th_Jan_2026\\CaseStudy\\DeviceProject\\DeviceOperationsInterface.cs",
-              "RelativeDocumentMoniker": "DeviceOperationsInterface.cs",
-              "ToolTip": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_2_12th_Jan_to_17th_Jan_2026\\Day_1_12th_Jan_2026\\CaseStudy\\DeviceProject\\DeviceOperationsInterface.cs",
-              "RelativeToolTip": "DeviceOperationsInterface.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-16T08:54:20.272Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "PortableDevices.cs",
-              "DocumentMoniker": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_2_12th_Jan_to_17th_Jan_2026\\Day_1_12th_Jan_2026\\CaseStudy\\DeviceProject\\PortableDevices.cs",
-              "RelativeDocumentMoniker": "PortableDevices.cs",
-              "ToolTip": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_2_12th_Jan_to_17th_Jan_2026\\Day_1_12th_Jan_2026\\CaseStudy\\DeviceProject\\PortableDevices.cs",
-              "RelativeToolTip": "PortableDevices.cs",
-              "ViewState": "AgIAAEYAAAAANDMzMzMDwFEAAAAJAAAAAAAAAA==",
+              "Title": "AbstractWarranty.cs",
+              "DocumentMoniker": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_2_12th_Jan_to_17th_Jan_2026\\Day_1_12th_Jan_2026\\CaseStudy\\DeviceProject\\AbstractWarranty.cs",
+              "RelativeDocumentMoniker": "AbstractWarranty.cs",
+              "ToolTip": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_2_12th_Jan_to_17th_Jan_2026\\Day_1_12th_Jan_2026\\CaseStudy\\DeviceProject\\AbstractWarranty.cs",
+              "RelativeToolTip": "AbstractWarranty.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-16T08:52:41.151Z",
+              "WhenOpened": "2026-01-16T09:20:55.194Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_2_12th_Jan_to_17th_Jan_2026\\Day_1_12th_Jan_2026\\CaseStudy\\DeviceProject\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_2_12th_Jan_to_17th_Jan_2026\\Day_1_12th_Jan_2026\\CaseStudy\\DeviceProject\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAEAAADAMjMzMzMLwAsAAAAIAAAAAAAAAA==",
+              "Title": "DeviceWarranty .cs",
+              "DocumentMoniker": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_2_12th_Jan_to_17th_Jan_2026\\Day_1_12th_Jan_2026\\CaseStudy\\DeviceProject\\DeviceWarranty .cs",
+              "RelativeDocumentMoniker": "DeviceWarranty .cs",
+              "ToolTip": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_2_12th_Jan_to_17th_Jan_2026\\Day_1_12th_Jan_2026\\CaseStudy\\DeviceProject\\DeviceWarranty .cs",
+              "RelativeToolTip": "DeviceWarranty .cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-12T07:09:21.801Z",
+              "WhenOpened": "2026-01-16T09:26:44.342Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Device.cs",
-              "DocumentMoniker": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_2_12th_Jan_to_17th_Jan_2026\\Day_1_12th_Jan_2026\\CaseStudy\\DeviceProject\\Device.cs",
-              "RelativeDocumentMoniker": "Device.cs",
-              "ToolTip": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_2_12th_Jan_to_17th_Jan_2026\\Day_1_12th_Jan_2026\\CaseStudy\\DeviceProject\\Device.cs",
-              "RelativeToolTip": "Device.cs",
-              "ViewState": "AgIAABoAAADg//////8vwAsAAAAAAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_2_12th_Jan_to_17th_Jan_2026\\Day_1_12th_Jan_2026\\CaseStudy\\DeviceProject\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_2_12th_Jan_to_17th_Jan_2026\\Day_1_12th_Jan_2026\\CaseStudy\\DeviceProject\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAA8AAACAmZmZmZktwCEAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-12T07:10:28.124Z",
+              "WhenOpened": "2026-01-12T07:09:21.801Z",
               "EditorCaption": ""
             }
           ]
