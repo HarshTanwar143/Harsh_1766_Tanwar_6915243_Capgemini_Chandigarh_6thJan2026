@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_4_26th_Jan_to_31th_Jan_2026\\Day_3_28th_Jan_2026\\PatientCaseStudy\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1A0A9205-25BD-4E91-A648-433F708B988E}|PatientCaseStudy.csproj|e:\\capegemini_cu_sec3_netcoreazure_harsh_tanwar\\week_4_26th_jan_to_31th_jan_2026\\day_3_28th_jan_2026\\patientcasestudy\\patientbo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A0A9205-25BD-4E91-A648-433F708B988E}|PatientCaseStudy.csproj|solutionrelative:patientbo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A0A9205-25BD-4E91-A648-433F708B988E}|PatientCaseStudy.csproj|e:\\capegemini_cu_sec3_netcoreazure_harsh_tanwar\\week_4_26th_jan_to_31th_jan_2026\\day_3_28th_jan_2026\\patientcasestudy\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A0A9205-25BD-4E91-A648-433F708B988E}|PatientCaseStudy.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A0A9205-25BD-4E91-A648-433F708B988E}|PatientCaseStudy.csproj|e:\\capegemini_cu_sec3_netcoreazure_harsh_tanwar\\week_4_26th_jan_to_31th_jan_2026\\day_3_28th_jan_2026\\patientcasestudy\\patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A0A9205-25BD-4E91-A648-433F708B988E}|PatientCaseStudy.csproj|solutionrelative:patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Patient.cs",
+              "DocumentMoniker": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_4_26th_Jan_to_31th_Jan_2026\\Day_3_28th_Jan_2026\\PatientCaseStudy\\Patient.cs",
+              "RelativeDocumentMoniker": "Patient.cs",
+              "ToolTip": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_4_26th_Jan_to_31th_Jan_2026\\Day_3_28th_Jan_2026\\PatientCaseStudy\\Patient.cs",
+              "RelativeToolTip": "Patient.cs",
+              "ViewState": "AgIAAA4AAADgzMzMzMwmwCgAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-28T07:08:12.019Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PatientBO.cs",
+              "DocumentMoniker": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_4_26th_Jan_to_31th_Jan_2026\\Day_3_28th_Jan_2026\\PatientCaseStudy\\PatientBO.cs",
+              "RelativeDocumentMoniker": "PatientBO.cs",
+              "ToolTip": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_4_26th_Jan_to_31th_Jan_2026\\Day_3_28th_Jan_2026\\PatientCaseStudy\\PatientBO.cs",
+              "RelativeToolTip": "PatientBO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-28T07:07:25.53Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_4_26th_Jan_to_31th_Jan_2026\\Day_3_28th_Jan_2026\\PatientCaseStudy\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_4_26th_Jan_to_31th_Jan_2026\\Day_3_28th_Jan_2026\\PatientCaseStudy\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-28T07:06:18.272Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

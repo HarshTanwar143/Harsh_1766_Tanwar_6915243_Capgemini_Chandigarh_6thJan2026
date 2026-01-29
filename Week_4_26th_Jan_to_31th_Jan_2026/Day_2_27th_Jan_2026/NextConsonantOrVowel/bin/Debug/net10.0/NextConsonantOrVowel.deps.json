@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "NextConsonantOrVowel/1.0.0": {
+        "runtime": {
+          "NextConsonantOrVowel.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "NextConsonantOrVowel/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
