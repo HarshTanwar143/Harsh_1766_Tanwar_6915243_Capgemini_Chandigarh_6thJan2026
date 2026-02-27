@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_7_16th_Feb_to_21th_Feb_2026\\Day_4_19th_Feb_2026_M1_PRACTICE\\JewelleryStoreApplication\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4B6DB52E-45C5-4848-9793-2B16D4C5772D}|JewelleryStoreApplication.csproj|e:\\capegemini_cu_sec3_netcoreazure_harsh_tanwar\\week_7_16th_feb_to_21th_feb_2026\\day_4_19th_feb_2026_m1_practice\\jewellerystoreapplication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B6DB52E-45C5-4848-9793-2B16D4C5772D}|JewelleryStoreApplication.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_7_16th_Feb_to_21th_Feb_2026\\Day_4_19th_Feb_2026_M1_PRACTICE\\JewelleryStoreApplication\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_7_16th_Feb_to_21th_Feb_2026\\Day_4_19th_Feb_2026_M1_PRACTICE\\JewelleryStoreApplication\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAABIAAADA//////8TwBoAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T18:02:01.186Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
