@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_10_9th_Mar_to_14th_Mar_2026\\Day_1_9th_Mar_2026\\EfCoreCodeFirstApproachDemo01\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3270514E-372A-B4A3-4D97-1755909E8A38}|EfCoreCodeFirstApproachDemo01.csproj|e:\\capegemini_cu_sec3_netcoreazure_harsh_tanwar\\week_10_9th_mar_to_14th_mar_2026\\day_1_9th_mar_2026\\efcorecodefirstapproachdemo01\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3270514E-372A-B4A3-4D97-1755909E8A38}|EfCoreCodeFirstApproachDemo01.csproj|solutionrelative:models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3270514E-372A-B4A3-4D97-1755909E8A38}|EfCoreCodeFirstApproachDemo01.csproj|e:\\capegemini_cu_sec3_netcoreazure_harsh_tanwar\\week_10_9th_mar_to_14th_mar_2026\\day_1_9th_mar_2026\\efcorecodefirstapproachdemo01\\models\\employeemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3270514E-372A-B4A3-4D97-1755909E8A38}|EfCoreCodeFirstApproachDemo01.csproj|solutionrelative:models\\employeemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3270514E-372A-B4A3-4D97-1755909E8A38}|EfCoreCodeFirstApproachDemo01.csproj|e:\\capegemini_cu_sec3_netcoreazure_harsh_tanwar\\week_10_9th_mar_to_14th_mar_2026\\day_1_9th_mar_2026\\efcorecodefirstapproachdemo01\\models\\employeedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3270514E-372A-B4A3-4D97-1755909E8A38}|EfCoreCodeFirstApproachDemo01.csproj|solutionrelative:models\\employeedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3270514E-372A-B4A3-4D97-1755909E8A38}|EfCoreCodeFirstApproachDemo01.csproj|e:\\capegemini_cu_sec3_netcoreazure_harsh_tanwar\\week_10_9th_mar_to_14th_mar_2026\\day_1_9th_mar_2026\\efcorecodefirstapproachdemo01\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3270514E-372A-B4A3-4D97-1755909E8A38}|EfCoreCodeFirstApproachDemo01.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3270514E-372A-B4A3-4D97-1755909E8A38}|EfCoreCodeFirstApproachDemo01.csproj|e:\\capegemini_cu_sec3_netcoreazure_harsh_tanwar\\week_10_9th_mar_to_14th_mar_2026\\day_1_9th_mar_2026\\efcorecodefirstapproachdemo01\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3270514E-372A-B4A3-4D97-1755909E8A38}|EfCoreCodeFirstApproachDemo01.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_10_9th_Mar_to_14th_Mar_2026\\Day_1_9th_Mar_2026\\EfCoreCodeFirstApproachDemo01\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\ErrorViewModel.cs",
+              "ToolTip": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_10_9th_Mar_to_14th_Mar_2026\\Day_1_9th_Mar_2026\\EfCoreCodeFirstApproachDemo01\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-09T08:52:28.02Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_10_9th_Mar_to_14th_Mar_2026\\Day_1_9th_Mar_2026\\EfCoreCodeFirstApproachDemo01\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_10_9th_Mar_to_14th_Mar_2026\\Day_1_9th_Mar_2026\\EfCoreCodeFirstApproachDemo01\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAABUAAACAZmZmZmYSwBsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-09T08:48:24.238Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_10_9th_Mar_to_14th_Mar_2026\\Day_1_9th_Mar_2026\\EfCoreCodeFirstApproachDemo01\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_10_9th_Mar_to_14th_Mar_2026\\Day_1_9th_Mar_2026\\EfCoreCodeFirstApproachDemo01\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-09T07:10:10.124Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EmployeeDbContext.cs",
+              "DocumentMoniker": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_10_9th_Mar_to_14th_Mar_2026\\Day_1_9th_Mar_2026\\EfCoreCodeFirstApproachDemo01\\Models\\EmployeeDbContext.cs",
+              "RelativeDocumentMoniker": "Models\\EmployeeDbContext.cs",
+              "ToolTip": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_10_9th_Mar_to_14th_Mar_2026\\Day_1_9th_Mar_2026\\EfCoreCodeFirstApproachDemo01\\Models\\EmployeeDbContext.cs",
+              "RelativeToolTip": "Models\\EmployeeDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-09T06:46:29.854Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EmployeeModel.cs",
+              "DocumentMoniker": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_10_9th_Mar_to_14th_Mar_2026\\Day_1_9th_Mar_2026\\EfCoreCodeFirstApproachDemo01\\Models\\EmployeeModel.cs",
+              "RelativeDocumentMoniker": "Models\\EmployeeModel.cs",
+              "ToolTip": "E:\\Capegemini_CU_Sec3_NetCoreAzure_Harsh_Tanwar\\Week_10_9th_Mar_to_14th_Mar_2026\\Day_1_9th_Mar_2026\\EfCoreCodeFirstApproachDemo01\\Models\\EmployeeModel.cs",
+              "RelativeToolTip": "Models\\EmployeeModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-09T06:39:32.843Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
