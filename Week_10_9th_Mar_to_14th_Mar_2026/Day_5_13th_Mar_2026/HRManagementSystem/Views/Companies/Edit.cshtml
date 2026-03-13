@@ -1,0 +1,28 @@
+﻿@model HRManagementSystem.Models.Company
+
+@{
+    ViewData["Title"] = "Edit Company";
+}
+
+<div style="max-width:500px; margin:40px auto; font-family:Segoe UI, sans-serif;">
+    <h2 style="color:#2c3e50;">✏️ Edit Company</h2>
+    <form method="post" action="/Companies/Edit/@Model.Id">
+        <input type="hidden" name="Id" value="@Model.Id" />
+        <div style="margin-bottom:15px;">
+            <label>Company Name</label>
+            <input name="Name" value="@Model.Name" style="width:100%; padding:8px; margin-top:5px; border:1px solid #ccc; border-radius:5px;" required />
+        </div>
+        <div style="margin-bottom:15px;">
+            <label>Location</label>
+            <input name="Location" value="@Model.Location" style="width:100%; padding:8px; margin-top:5px; border:1px solid #ccc; border-radius:5px;" />
+        </div>
+        <div style="margin-bottom:15px;">
+            <label>Industry</label>
+            <input name="Industry" value="@Model.Industry" style="width:100%; padding:8px; margin-top:5px; border:1px solid #ccc; border-radius:5px;" />
+        </div>
+        <button type="submit" style="background:#f39c12; color:white; padding:10px 25px; border:none; border-radius:6px; cursor:pointer;">
+            💾 Update Company
+        </button>
+        <a href="/Companies/Index" style="margin-left:15px; color:#e74c3c;">Cancel</a>
+    </form>
+</div>

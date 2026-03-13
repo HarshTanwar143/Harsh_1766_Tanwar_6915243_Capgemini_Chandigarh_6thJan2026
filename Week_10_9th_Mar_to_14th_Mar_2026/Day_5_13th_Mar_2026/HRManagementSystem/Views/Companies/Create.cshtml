@@ -1,0 +1,27 @@
+﻿@model HRManagementSystem.Models.Company
+
+@{
+    ViewData["Title"] = "Add Company";
+}
+
+<div style="max-width:500px; margin:40px auto; font-family:Segoe UI, sans-serif;">
+    <h2 style="color:#2c3e50;">🏢 Add New Company</h2>
+    <form method="post" action="/Companies/Create">
+        <div style="margin-bottom:15px;">
+            <label>Company Name</label>
+            <input name="Name" style="width:100%; padding:8px; margin-top:5px; border:1px solid #ccc; border-radius:5px;" required />
+        </div>
+        <div style="margin-bottom:15px;">
+            <label>Location</label>
+            <input name="Location" style="width:100%; padding:8px; margin-top:5px; border:1px solid #ccc; border-radius:5px;" />
+        </div>
+        <div style="margin-bottom:15px;">
+            <label>Industry</label>
+            <input name="Industry" style="width:100%; padding:8px; margin-top:5px; border:1px solid #ccc; border-radius:5px;" />
+        </div>
+        <button type="submit" style="background:#27ae60; color:white; padding:10px 25px; border:none; border-radius:6px; cursor:pointer;">
+            ✅ Save Company
+        </button>
+        <a href="/Companies/Index" style="margin-left:15px; color:#e74c3c;">Cancel</a>
+    </form>
+</div>

@@ -1,0 +1,44 @@
+﻿@{
+    ViewData["Title"] = "Add Employee";
+}
+
+<div style="max-width:500px; margin:40px auto; font-family:Segoe UI, sans-serif;">
+
+    <h2 style="color:#2c3e50;">👤 Add New Employee</h2>
+
+    @if (ViewBag.CompanyName != null)
+    {
+        <div style="background:#eaf4fb; border:1px solid #2980b9; padding:10px 15px;
+                        border-radius:6px; margin-bottom:20px; color:#2980b9;">
+            🏢 Adding employee to: <strong>@ViewBag.CompanyName</strong>
+        </div>
+    }
+
+    <form method="post" action="/Employees/Create">
+        <input type="hidden" name="CompanyId" value="@ViewBag.CompanyId" />
+
+        <div style="margin-bottom:15px;">
+            <label>Employee Name</label>
+            <input name="Name" style="width:100%; padding:8px; margin-top:5px;
+                   border:1px solid #ccc; border-radius:5px;" required />
+        </div>
+
+        <div style="margin-bottom:15px;">
+            <label>Position</label>
+            <input name="Position" style="width:100%; padding:8px; margin-top:5px;
+                   border:1px solid #ccc; border-radius:5px;" required />
+        </div>
+
+        <div style="margin-bottom:15px;">
+            <label>Email</label>
+            <input name="Email" type="email" style="width:100%; padding:8px; margin-top:5px;
+                   border:1px solid #ccc; border-radius:5px;" required />
+        </div>
+
+        <button type="submit" style="background:#2980b9; color:white; padding:10px 25px;
+                border:none; border-radius:6px; cursor:pointer;">
+            ✅ Save Employee
+        </button>
+        <a href="/Companies/Index" style="margin-left:15px; color:#e74c3c;">Cancel</a>
+    </form>
+</div>

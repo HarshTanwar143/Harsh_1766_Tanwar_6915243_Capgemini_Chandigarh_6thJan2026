@@ -1,0 +1,42 @@
+﻿@model IEnumerable<PublishingApp.Models.Author>
+
+@{
+    ViewData["Title"] = "Authors";
+}
+
+<h2 class="mb-4">Authors & Their Books</h2>
+<a asp-action="Create" class="btn btn-primary mb-3">+ Add Author</a>
+
+<table class="table table-bordered table-hover">
+    <thead class="table-dark">
+        <tr>
+            <th>Name</th>
+            <th>Bio</th>
+            <th>Books Written</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var author in Model)
+        {
+            <tr>
+                <td>@author.Name</td>
+                <td>@author.Bio</td>
+                <td>
+                    @if (author.AuthorBooks.Any())
+                    {
+                        @string.Join(", ", author.AuthorBooks.Select(ab => ab.Book.Title))
+                    }
+                    else
+                    {
+                        <span class="text-muted">No books yet</span>
+                    }
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@author.Id" class="btn btn-sm btn-warning">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@author.Id" class="btn btn-sm btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

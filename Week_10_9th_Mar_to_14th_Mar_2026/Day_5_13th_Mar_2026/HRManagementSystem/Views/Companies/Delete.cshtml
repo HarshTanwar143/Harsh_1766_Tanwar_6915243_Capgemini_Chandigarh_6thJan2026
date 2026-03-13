@@ -1,0 +1,16 @@
+﻿@model HRManagementSystem.Models.Company
+
+@{
+    ViewData["Title"] = "Delete Company";
+}
+
+<div style="max-width:500px; margin:40px auto; font-family:Segoe UI, sans-serif; text-align:center;">
+    <h2 style="color:#e74c3c;">🗑️ Delete Company</h2>
+    <p>Are you sure you want to delete <strong>@Model.Name</strong> and all its employees?</p>
+    <form method="post" action="/Companies/Delete/@Model.Id">
+        <button type="submit" style="background:#e74c3c; color:white; padding:10px 25px; border:none; border-radius:6px; cursor:pointer;">
+            Yes, Delete
+        </button>
+        <a href="/Companies/Index" style="margin-left:15px; color:#27ae60; font-weight:bold;">Cancel</a>
+    </form>
+</div>

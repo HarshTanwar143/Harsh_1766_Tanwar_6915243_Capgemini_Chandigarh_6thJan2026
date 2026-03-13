@@ -1,0 +1,16 @@
+﻿@model PublishingApp.Models.Book
+
+@{
+    ViewData["Title"] = "Delete Book";
+}
+
+<h2>Delete Book</h2>
+<div class="alert alert-danger">
+    Are you sure you want to delete <strong>@Model.Title</strong>?
+    <br />Authors: @string.Join(", ", Model.AuthorBooks.Select(ab => ab.Author.Name))
+</div>
+<form asp-action="Delete">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Yes, Delete</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>

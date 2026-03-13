@@ -1,0 +1,49 @@
+﻿@model IEnumerable<ECommerceApp.Models.Customer>
+
+@{
+    ViewData["Title"] = "Customers";
+}
+
+<h2 class="mb-4">Customers & Purchased Products</h2>
+<a asp-action="Create" class="btn btn-primary mb-3">+ Add Customer</a>
+<a asp-controller="Orders" asp-action="Create" class="btn btn-success mb-3">Place New Order</a>
+
+<table class="table table-bordered table-hover">
+    <thead class="table-dark">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Products Purchased</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var customer in Model)
+        {
+            <tr>
+                <td>@customer.Name</td>
+                <td>@customer.Email</td>
+                <td>
+                    @if (customer.Orders.Any())
+                    {
+                        <ul class="mb-0">
+                            @foreach (var order in customer.Orders)
+                            {
+                                <li>@order.Product.Name — <strong>$@order.Product.Price</strong></li>
+                            }
+                        </ul>
+                    }
+                    else
+                    {
+                        <span class="text-muted">No purchases yet</span>
+                    }
+                </td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@customer.Id" class="btn btn-sm btn-info">Details</a>
+                    <a asp-action="Edit" asp-route-id="@customer.Id" class="btn btn-sm btn-warning">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@customer.Id" class="btn btn-sm btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

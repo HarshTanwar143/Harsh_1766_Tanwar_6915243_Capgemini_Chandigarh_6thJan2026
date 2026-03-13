@@ -1,0 +1,19 @@
+﻿@model PublishingApp.Models.Book
+
+@{
+    ViewData["Title"] = "Book Details";
+}
+
+<h2>@Model.Title</h2>
+<p><strong>Genre:</strong> @Model.Genre</p>
+<p><strong>Published Year:</strong> @Model.PublishedYear</p>
+
+<h4 class="mt-4">Authors:</h4>
+<ul>
+    @foreach (var ab in Model.AuthorBooks)
+    {
+        <li>@ab.Author.Name — <em>@ab.Author.Bio</em></li>
+    }
+</ul>
+
+<a asp-action="Index" class="btn btn-secondary">Back to List</a>

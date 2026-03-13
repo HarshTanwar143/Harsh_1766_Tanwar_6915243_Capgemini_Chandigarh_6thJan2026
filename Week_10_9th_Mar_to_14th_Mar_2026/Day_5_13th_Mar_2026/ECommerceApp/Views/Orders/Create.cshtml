@@ -1,0 +1,29 @@
+﻿@model ECommerceApp.Models.Order
+
+@{
+    ViewData["Title"] = "Place Order";
+}
+
+<h2>Place an Order</h2>
+<form asp-action="Create">
+    <div class="mb-3">
+        <label class="form-label">Customer</label>
+        <select asp-for="CustomerId" class="form-select">
+            @foreach (var c in ViewBag.Customers)
+            {
+                <option value="@c.Id">@c.Name</option>
+            }
+        </select>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Product</label>
+        <select asp-for="ProductId" class="form-select">
+            @foreach (var p in ViewBag.Products)
+            {
+                <option value="@p.Id">@p.Name ($@p.Price)</option>
+            }
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Place Order</button>
+    <a asp-controller="Customers" asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>
