@@ -1,0 +1,164 @@
+﻿@model ShopApp.Models.Order
+
+@{
+    ViewData["Title"] = "Checkout";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var cart = ViewBag.Cart as List<ShopApp.Models.CartItem>;
+    decimal total = ViewBag.Total;
+}
+
+<div class="container py-4">
+
+    @* ✅ Bootstrap Progress Bar — Steps 2 & 3 *@
+    <div class="card shadow-sm mb-4">
+        <div class="card-body">
+            <p class="fw-bold mb-2">🛒 Checkout Steps</p>
+            <div class="d-flex justify-content-between text-center mb-1">
+                <small class="text-muted">① Cart</small>
+                <small class="fw-bold text-primary">② Address</small>
+                <small class="fw-bold text-primary">③ Payment</small>
+                <small class="text-muted">④ Confirmation</small>
+            </div>
+            <div class="progress" style="height:10px;">
+                <div class="progress-bar bg-primary"
+                     style="width:75%"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row g-4">
+
+        @* ✅ Left: Address + Payment Form *@
+        <div class="col-md-7">
+            <form method="post" asp-action="PlaceOrder">
+
+                @* Address Section *@
+                <div class="card shadow-sm mb-4">
+                    <div class="card-header bg-primary text-white fw-bold">
+                        📍 Delivery Address
+                    </div>
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold">Full Name *</label>
+                            <input asp-for="FullName" class="form-control"
+                                   placeholder="Enter your full name" />
+                            <span asp-validation-for="FullName"
+                                  class="text-danger small"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold">Email *</label>
+                            <input asp-for="Email" type="email"
+                                   class="form-control"
+                                   placeholder="Enter your email" />
+                            <span asp-validation-for="Email"
+                                  class="text-danger small"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold">Address *</label>
+                            <textarea asp-for="Address" class="form-control"
+                                      rows="2"
+                                      placeholder="House no, Street, Area"></textarea>
+                            <span asp-validation-for="Address"
+                                  class="text-danger small"></span>
+                        </div>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">City *</label>
+                                <input asp-for="City" class="form-control"
+                                       placeholder="City" />
+                                <span asp-validation-for="City"
+                                      class="text-danger small"></span>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Pincode *</label>
+                                <input asp-for="Pincode" class="form-control"
+                                       placeholder="Pincode" />
+                                <span asp-validation-for="Pincode"
+                                      class="text-danger small"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                @* Payment Section *@
+                <div class="card shadow-sm mb-4">
+                    <div class="card-header bg-success text-white fw-bold">
+                        💳 Payment Details
+                    </div>
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold">
+                                Card Number *
+                            </label>
+                            <input asp-for="CardNumber" class="form-control"
+                                   placeholder="1234 5678 9012 3456"
+                                   maxlength="19" />
+                            <span asp-validation-for="CardNumber"
+                                  class="text-danger small"></span>
+                        </div>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">
+                                    Expiry Date *
+                                </label>
+                                <input asp-for="CardExpiry" class="form-control"
+                                       placeholder="MM/YY" maxlength="5" />
+                                <span asp-validation-for="CardExpiry"
+                                      class="text-danger small"></span>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">CVV *</label>
+                                <input asp-for="CardCVV" class="form-control"
+                                       placeholder="123" maxlength="3"
+                                       type="password" />
+                                <span asp-validation-for="CardCVV"
+                                      class="text-danger small"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-success w-100 py-3 fs-5">
+                    ✅ Place Order — ₹@total.ToString("0.00")
+                </button>
+
+            </form>
+        </div>
+
+        @* ✅ Right: Order Summary *@
+        <div class="col-md-5">
+            <div class="card shadow-sm">
+                <div class="card-header fw-bold">🧾 Order Summary</div>
+                <div class="card-body p-0">
+                    <ul class="list-group list-group-flush">
+                        @foreach (var item in cart)
+                        {
+                            <li class="list-group-item d-flex
+                                           justify-content-between">
+                                <span>
+                                    @item.ProductName
+                                    <small class="text-muted">
+                                        x@item.Quantity
+                                    </small>
+                                </span>
+                                <strong>₹@item.Total.ToString("0.00")</strong>
+                            </li>
+                        }
+                        <li class="list-group-item d-flex
+                                   justify-content-between bg-light">
+                            <span class="fw-bold fs-5">Total</span>
+                            <strong class="fs-5 text-success">
+                                ₹@total.ToString("0.00")
+                            </strong>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}

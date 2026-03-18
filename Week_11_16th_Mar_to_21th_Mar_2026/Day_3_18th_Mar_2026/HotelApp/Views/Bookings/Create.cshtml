@@ -1,0 +1,76 @@
+﻿@{
+    ViewData["Title"] = "Book Room";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var room = ViewBag.Room as HotelApp.Models.Room;
+}
+
+<div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-7">
+
+            @* ✅ Bootstrap Alert — room info *@
+            <div class="alert alert-info mb-4">
+                📋 Booking Room <strong>@room?.RoomNumber</strong>
+                — @room?.RoomType |
+                ₹@room?.PricePerNight per night
+            </div>
+
+            <div class="card shadow border-0">
+                <div class="card-header bg-success text-white py-3">
+                    <h4 class="mb-0">📅 Complete Your Booking</h4>
+                </div>
+                <div class="card-body p-4">
+                    <form method="post" asp-action="Create">
+                        <input type="hidden" name="RoomId" value="@room?.Id" />
+
+                        <h5 class="fw-bold mb-3">👤 Your Details</h5>
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold">Full Name *</label>
+                            <input type="text" name="Name"
+                                   class="form-control" required
+                                   placeholder="Enter your name" />
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold">Email *</label>
+                            <input type="email" name="Email"
+                                   class="form-control" required
+                                   placeholder="Enter your email" />
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold">Phone *</label>
+                            <input type="text" name="Phone"
+                                   class="form-control" required
+                                   placeholder="Enter your phone" />
+                        </div>
+
+                        <hr />
+
+                        <h5 class="fw-bold mb-3">📅 Booking Dates</h5>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Check-In *</label>
+                                <input type="date" name="CheckInDate"
+                                       class="form-control" required />
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Check-Out *</label>
+                                <input type="date" name="CheckOutDate"
+                                       class="form-control" required />
+                            </div>
+                        </div>
+
+                        <div class="d-flex gap-2 mt-4">
+                            <button type="submit" class="btn btn-success flex-grow-1">
+                                ✅ Confirm Booking
+                            </button>
+                            <a asp-controller="Rooms" asp-action="Index"
+                               class="btn btn-outline-secondary flex-grow-1">
+                                ✖ Cancel
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,75 @@
+﻿@model JwtMvcDemo.Models.User
+
+@{
+    ViewData["Title"] = "Register";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register - JWT Portal</title>
+    <link rel="stylesheet"
+          href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+</head>
+<body class="bg-light">
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-5">
+
+                <div class="card shadow border-0">
+                    <div class="card-header bg-success text-white text-center py-4">
+                        <h2 class="mb-0">📝 Student Portal</h2>
+                        <p class="mb-0 mt-1 small">Create your account</p>
+                    </div>
+                    <div class="card-body p-4">
+                        <h4 class="text-center fw-bold mb-4">Register</h4>
+
+                        <form asp-action="Register" method="post">
+
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold">
+                                    👤 Username
+                                </label>
+                                <input asp-for="Username"
+                                       class="form-control"
+                                       placeholder="Choose a username" />
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold">
+                                    🔑 Password
+                                </label>
+                                <input asp-for="Password"
+                                       type="password"
+                                       class="form-control"
+                                       placeholder="Choose a password" />
+                            </div>
+
+                            <button type="submit"
+                                    class="btn btn-success w-100 py-2 mt-2">
+                                ✅ Create Account
+                            </button>
+
+                        </form>
+
+                        <hr />
+
+                        <div class="text-center">
+                            <p class="text-muted mb-2">Already have an account?</p>
+                            <a asp-action="Login"
+                               class="btn btn-outline-primary w-100">
+                                🔐 Login
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

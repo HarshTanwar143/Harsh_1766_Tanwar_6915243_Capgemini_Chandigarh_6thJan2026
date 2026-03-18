@@ -1,0 +1,121 @@
+﻿@{
+    ViewData["Title"] = "Dashboard";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard - JWT Portal</title>
+    <link rel="stylesheet"
+          href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+</head>
+<body class="bg-light">
+
+    @* ✅ Bootstrap Navbar *@
+    <nav class="navbar navbar-dark bg-primary px-4">
+        <span class="navbar-brand fw-bold">🔐 JWT Student Portal</span>
+        <div class="d-flex align-items-center gap-3">
+            <span class="text-white">
+                👤 Welcome, <strong>@ViewBag.Username</strong>
+            </span>
+            <form method="post" asp-action="Logout">
+                <button type="submit" class="btn btn-outline-light btn-sm">
+                    🚪 Logout
+                </button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+
+        @* ✅ Welcome Alert *@
+        <div class="alert alert-success d-flex align-items-center mb-4">
+            <span class="fs-4 me-3">🎉</span>
+            <div>
+                <strong>Login Successful!</strong>
+                You are now accessing a JWT-protected page.
+            </div>
+        </div>
+
+        @* ✅ Stats Cards *@
+        <div class="row g-4 mb-4">
+            <div class="col-md-4">
+                <div class="card text-white bg-primary shadow-sm">
+                    <div class="card-body text-center">
+                        <h2>👤</h2>
+                        <h5 class="fw-bold">@ViewBag.Username</h5>
+                        <p class="mb-0">Logged In User</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-white bg-success shadow-sm">
+                    <div class="card-body text-center">
+                        <h2>✅</h2>
+                        <h5 class="fw-bold">JWT Verified</h5>
+                        <p class="mb-0">Token is Valid</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-white bg-warning shadow-sm">
+                    <div class="card-body text-center">
+                        <h2>⏰</h2>
+                        <h5 class="fw-bold">Expires At</h5>
+                        <p class="mb-0 small">@ViewBag.Expiry</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @* ✅ JWT Token Display *@
+        <div class="card shadow-sm">
+            <div class="card-header fw-bold bg-dark text-white">
+                🔑 Your JWT Token
+            </div>
+            <div class="card-body">
+                <p class="text-muted small mb-2">
+                    This token is stored in session and
+                    used to verify your identity:
+                </p>
+                <div class="bg-light border rounded p-3">
+                    <code style="word-break:break-all; font-size:12px;">
+                        @ViewBag.Token
+                    </code>
+                </div>
+
+                @* ✅ How JWT works explanation *@
+                <div class="mt-4">
+                    <h6 class="fw-bold">🔍 How JWT Works:</h6>
+                    <div class="row g-2 mt-1">
+                        <div class="col-md-3">
+                            <div class="card border-primary text-center p-2">
+                                <small>1️⃣ User Logs In</small>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card border-success text-center p-2">
+                                <small>2️⃣ Server Creates Token</small>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card border-warning text-center p-2">
+                                <small>3️⃣ Token Stored in Session</small>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card border-info text-center p-2">
+                                <small>4️⃣ Token Validates Access</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

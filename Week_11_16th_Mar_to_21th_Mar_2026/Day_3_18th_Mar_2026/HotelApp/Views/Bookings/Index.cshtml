@@ -1,0 +1,154 @@
+﻿@model List<HotelApp.Models.Booking>
+
+@{
+    ViewData["Title"] = "Admin Dashboard";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container py-4">
+
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show">
+            ✅ @TempData["Success"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
+
+    <h2 class="fw-bold mb-4">📊 Admin Dashboard</h2>
+
+    @* ✅ Stats Cards *@
+    <div class="row g-3 mb-4">
+        <div class="col-md-3">
+            <div class="card text-white bg-primary shadow-sm">
+                <div class="card-body text-center">
+                    <h3 class="fw-bold">@ViewBag.TotalBookings</h3>
+                    <p class="mb-0">Total Bookings</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-white bg-success shadow-sm">
+                <div class="card-body text-center">
+                    <h3 class="fw-bold">@ViewBag.ConfirmedCount</h3>
+                    <p class="mb-0">Confirmed</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-white bg-danger shadow-sm">
+                <div class="card-body text-center">
+                    <h3 class="fw-bold">@ViewBag.CancelledCount</h3>
+                    <p class="mb-0">Cancelled</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-white bg-warning shadow-sm">
+                <div class="card-body text-center">
+                    <h3 class="fw-bold">₹@ViewBag.TotalRevenue</h3>
+                    <p class="mb-0">Total Revenue</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @* ✅ Occupancy Chart using Chart.js *@
+    <div class="card shadow-sm mb-4">
+        <div class="card-header fw-bold">📈 Occupancy Overview</div>
+        <div class="card-body">
+            <canvas id="occupancyChart" height="100"></canvas>
+        </div>
+    </div>
+
+    @* ✅ Bookings Table *@
+    <div class="card shadow-sm">
+        <div class="card-header fw-bold">📋 All Bookings</div>
+        <div class="card-body p-0">
+            <div class="table-responsive">
+                <table class="table table-hover table-striped mb-0">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>#</th>
+                            <th>Customer</th>
+                            <th>Room</th>
+                            <th>Check-In</th>
+                            <th>Check-Out</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var b in Model)
+                        {
+                            <tr>
+                                <td><span class="badge bg-primary">@b.Id</span></td>
+                                <td>
+                                    <strong>@b.Customer?.Name</strong><br />
+                                    <small class="text-muted">@b.Customer?.Email</small>
+                                </td>
+                                <td>
+                                    Room @b.Room?.RoomNumber
+                                    <span class="badge bg-info text-dark">
+                                        @b.Room?.RoomType
+                                    </span>
+                                </td>
+                                <td>@b.CheckInDate.ToString("dd MMM yyyy")</td>
+                                <td>@b.CheckOutDate.ToString("dd MMM yyyy")</td>
+                                <td>
+                                    @if (b.Status == "Confirmed")
+                                    {
+                                        <span class="badge bg-success">✅ @b.Status</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="badge bg-danger">❌ @b.Status</span>
+                                    }
+                                </td>
+                                <td>
+                                    @if (b.Status == "Confirmed")
+                                    {
+                                        <form method="post"
+                                              asp-action="Cancel"
+                                              asp-route-id="@b.Id"
+                                              onsubmit="return confirm('Cancel this booking?')">
+                                            <button type="submit"
+                                                    class="btn btn-sm btn-danger">
+                                                ✖ Cancel
+                                            </button>
+                                        </form>
+                                    }
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+@* ✅ Chart.js for occupancy visualization *@
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById('occupancyChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Confirmed', 'Cancelled'],
+                datasets: [{
+                    data: [@ViewBag.ConfirmedCount, @ViewBag.CancelledCount],
+                    backgroundColor: ['#198754', '#dc3545'],
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { position: 'bottom' }
+                }
+            }
+        });
+    </script>
+}

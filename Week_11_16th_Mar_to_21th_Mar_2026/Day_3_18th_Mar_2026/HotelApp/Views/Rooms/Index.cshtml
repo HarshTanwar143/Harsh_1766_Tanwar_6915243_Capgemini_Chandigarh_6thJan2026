@@ -1,0 +1,218 @@
+﻿@model List<HotelApp.Models.Room>
+
+@{
+    ViewData["Title"] = "Hotel Rooms";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container py-4">
+
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show">
+            ✅ @TempData["Success"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="fw-bold">🏨 Hotel Rooms</h2>
+        <div class="d-flex gap-2">
+            <a asp-controller="Bookings" asp-action="Index"
+               class="btn btn-outline-dark">📊 Dashboard</a>
+            <button class="btn btn-primary"
+                    data-bs-toggle="modal" data-bs-target="#addRoomModal">
+                ➕ Add Room
+            </button>
+        </div>
+    </div>
+
+    @* ✅ Bootstrap Date Filter for Availability *@
+    <div class="card shadow-sm mb-4">
+        <div class="card-body">
+            <h6 class="fw-bold mb-3">🔍 Check Room Availability</h6>
+            <form method="get" asp-action="Index">
+                <div class="row g-3 align-items-end">
+                    <div class="col-md-4">
+                        <label class="form-label fw-semibold">Check-In Date</label>
+                        <input type="date" name="checkIn"
+                               value="@ViewBag.CheckIn" class="form-control" />
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label fw-semibold">Check-Out Date</label>
+                        <input type="date" name="checkOut"
+                               value="@ViewBag.CheckOut" class="form-control" />
+                    </div>
+                    <div class="col-md-4 d-flex gap-2">
+                        <button type="submit" class="btn btn-primary w-100">
+                            🔍 Check
+                        </button>
+                        <a asp-action="Index" class="btn btn-outline-secondary w-100">
+                            ✖ Clear
+                        </a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    @* ✅ Bootstrap Accordion — Room Details *@
+    <div class="accordion shadow-sm" id="roomsAccordion">
+        @for (int i = 0; i < Model.Count; i++)
+        {
+            var room = Model[i];
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button @(i == 0 ? "" : "collapsed")"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#room@(room.Id)">
+                        <div class="d-flex justify-content-between w-100 me-3">
+                            <span>
+                                🛏️ Room @room.RoomNumber —
+                                <strong>@room.RoomType</strong>
+                            </span>
+                            <span>
+                                <span class="badge bg-success me-2">
+                                    ₹@room.PricePerNight/night
+                                </span>
+                                @if (room.IsAvailable)
+                                {
+                                    <span class="badge bg-primary">✅ Available</span>
+                                }
+                                else
+                                {
+                                    <span class="badge bg-danger">❌ Booked</span>
+                                }
+                            </span>
+                        </div>
+                    </button>
+                </h2>
+                <div id="room@(room.Id)"
+                     class="accordion-collapse collapse @(i == 0 ? "show" : "")"
+                     data-bs-parent="#roomsAccordion">
+                    <div class="accordion-body">
+                        <div class="row">
+                            <div class="col-md-4">
+                                @* ✅ Bootstrap Carousel for room images *@
+                                <div id="carousel@(room.Id)"
+                                     class="carousel slide"
+                                     data-bs-ride="carousel">
+                                    <div class="carousel-inner rounded">
+                                        <div class="carousel-item active">
+                                            <img src="@(string.IsNullOrEmpty(room.ImageUrl)
+                                                                                                         ? "https://placehold.co/400x250?text=Room+" + room.RoomNumber
+                                                                                                         : room.ImageUrl)"
+                                             class="d-block w-100"
+                                             style="height:200px;object-fit:cover;"
+                                             alt="Room @room.RoomNumber" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <h5 class="fw-bold">@room.RoomType Room</h5>
+                            <p class="text-muted">
+                                🏷️ Amenities: @room.Amenities
+                            </p>
+                            <p>
+                                💰 Price:
+                                <strong>₹@room.PricePerNight per night</strong>
+                            </p>
+                            @if (room.IsAvailable)
+                            {
+                                <a asp-controller="Bookings"
+                                   asp-action="Create"
+                                   asp-route-roomId="@room.Id"
+                                   class="btn btn-success">
+                                    📅 Book This Room
+                                </a>
+                            }
+                            else
+                            {
+                                <button class="btn btn-secondary" disabled>
+                                    ❌ Already Booked
+                                </button>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+                }
+    </div>
+
+    @if (Model.Count == 0)
+    {
+        if (ViewBag.Filtered == true)
+        {
+            // ✅ Only show this when dates were actually selected
+            <div class="alert alert-warning text-center mt-3">
+                No rooms available for the selected dates. Try different dates.
+            </div>
+        }
+        else
+        {
+            // ✅ No rooms added yet at all
+            <div class="alert alert-info text-center mt-3">
+                No rooms added yet. Click <strong>"Add Room"</strong> to get started!
+            </div>
+        }
+    }
+</div>
+
+@* ✅ Add Room Modal *@
+<div class="modal fade" id="addRoomModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title">➕ Add New Room</h5>
+                <button type="button" class="btn-close btn-close-white"
+                        data-bs-dismiss="modal"></button>
+            </div>
+            <form method="post" asp-controller="Rooms" asp-action="Create">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">Room Number *</label>
+                        <input type="text" name="RoomNumber"
+                               class="form-control" required
+                               placeholder="e.g. 101" />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">Room Type *</label>
+                        <select name="RoomType" class="form-select" required>
+                            <option value="">-- Select Type --</option>
+                            <option value="Single">Single</option>
+                            <option value="Double">Double</option>
+                            <option value="Suite">Suite</option>
+                            <option value="Deluxe">Deluxe</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">Price Per Night (₹) *</label>
+                        <input type="number" name="PricePerNight"
+                               class="form-control" required
+                               step="0.01" placeholder="e.g. 2500" />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">Amenities</label>
+                        <input type="text" name="Amenities" class="form-control"
+                               placeholder="e.g. WiFi, AC, TV, Mini Bar" />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">Image URL</label>
+                        <input type="text" name="ImageUrl" class="form-control"
+                               placeholder="https://example.com/room.jpg" />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary"
+                            data-bs-dismiss="modal">
+                        Cancel
+                    </button>
+                    <button type="submit" class="btn btn-primary">✅ Add Room</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

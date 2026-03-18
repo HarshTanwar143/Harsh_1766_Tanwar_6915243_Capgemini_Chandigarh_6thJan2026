@@ -1,0 +1,141 @@
+﻿@model List<ShopApp.Models.CartItem>
+
+@{
+    ViewData["Title"] = "Shopping Cart";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var total = Model.Sum(c => c.Total);
+}
+
+<div class="container py-4">
+
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show">
+            ✅ @TempData["Success"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
+
+    @* ✅ Bootstrap Progress Bar — Step 1: Cart *@
+    <div class="card shadow-sm mb-4">
+        <div class="card-body">
+            <p class="fw-bold mb-2">🛒 Checkout Steps</p>
+            <div class="d-flex justify-content-between text-center mb-1">
+                <small class="fw-bold text-primary">① Cart</small>
+                <small class="text-muted">② Address</small>
+                <small class="text-muted">③ Payment</small>
+                <small class="text-muted">④ Confirmation</small>
+            </div>
+            <div class="progress" style="height:10px;">
+                <div class="progress-bar bg-primary"
+                     style="width:25%"></div>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="fw-bold mb-4">🛒 Your Cart</h2>
+
+    @if (Model.Count == 0)
+    {
+        <div class="alert alert-warning text-center py-4">
+            <h5>🛒 Your cart is empty!</h5>
+            <a asp-controller="Products" asp-action="Index"
+               class="btn btn-primary mt-2">
+                🛍️ Continue Shopping
+            </a>
+        </div>
+    }
+    else
+    {
+        @* ✅ Bootstrap Table for cart items *@
+        <div class="card shadow-sm mb-4">
+            <div class="card-body p-0">
+                <div class="table-responsive">
+                    <table class="table table-hover mb-0">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Product</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                                <th>Total</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        <div class="d-flex align-items-center gap-3">
+                                            <img src="@item.ImageUrl"
+                                                 style="width:50px;height:50px;
+                                                                object-fit:cover;
+                                                                border-radius:8px;"
+                                                 onerror="this.src='https://placehold.co/50x50'"
+                                                 alt="@item.ProductName" />
+                                            <strong>@item.ProductName</strong>
+                                        </div>
+                                    </td>
+                                    <td>₹@item.Price.ToString("0.00")</td>
+                                    <td>
+                                        @* ✅ Quantity update form *@
+                                        <form method="post"
+                                              asp-action="UpdateQuantity"
+                                              class="d-flex align-items-center gap-2">
+                                            <input type="hidden"
+                                                   name="productId"
+                                                   value="@item.ProductId" />
+                                            <input type="number"
+                                                   name="quantity"
+                                                   value="@item.Quantity"
+                                                   min="1" max="99"
+                                                   class="form-control form-control-sm"
+                                                   style="width:70px;"
+                                                   onchange="this.form.submit()" />
+                                        </form>
+                                    </td>
+                                    <td>
+                                        <strong>₹@item.Total.ToString("0.00")</strong>
+                                    </td>
+                                    <td>
+                                        <form method="post" asp-action="Remove">
+                                            <input type="hidden"
+                                                   name="productId"
+                                                   value="@item.ProductId" />
+                                            <button type="submit"
+                                                    class="btn btn-sm btn-danger"
+                                                    onclick="return confirm('Remove item?')">
+                                                🗑️
+                                            </button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                        <tfoot class="table-light">
+                            <tr>
+                                <td colspan="3" class="text-end fw-bold fs-5">
+                                    Grand Total:
+                                </td>
+                                <td class="fw-bold fs-5 text-success">
+                                    ₹@total.ToString("0.00")
+                                </td>
+                                <td></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-between">
+            <a asp-controller="Products" asp-action="Index"
+               class="btn btn-outline-secondary">
+                ← Continue Shopping
+            </a>
+            <a asp-action="Checkout" class="btn btn-success px-5">
+                Proceed to Checkout →
+            </a>
+        </div>
+    }
+</div>

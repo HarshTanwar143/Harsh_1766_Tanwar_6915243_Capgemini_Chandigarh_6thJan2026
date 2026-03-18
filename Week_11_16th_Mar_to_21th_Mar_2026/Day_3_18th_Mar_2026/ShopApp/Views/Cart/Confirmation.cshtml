@@ -1,0 +1,53 @@
+﻿@{
+    ViewData["Title"] = "Order Confirmed";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-center">
+
+            @* ✅ Bootstrap Progress Bar — Step 4: Confirmation *@
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <p class="fw-bold mb-2">🛒 Checkout Steps</p>
+                    <div class="d-flex justify-content-between text-center mb-1">
+                        <small class="text-muted">① Cart</small>
+                        <small class="text-muted">② Address</small>
+                        <small class="text-muted">③ Payment</small>
+                        <small class="fw-bold text-success">④ Confirmation</small>
+                    </div>
+                    <div class="progress" style="height:10px;">
+                        <div class="progress-bar bg-success"
+                             style="width:100%"></div>
+                    </div>
+                </div>
+            </div>
+
+            @* ✅ Bootstrap Alert — Success *@
+            <div class="alert alert-success py-4">
+                <h1>🎉</h1>
+                <h3 class="fw-bold">Order Confirmed!</h3>
+                <p class="mb-1">
+                    Thank you,
+                    <strong>@TempData["CustomerName"]</strong>!
+                </p>
+                <p class="mb-1">
+                    Order ID: <strong>#@TempData["OrderId"]</strong>
+                </p>
+                <p class="mb-0">
+                    Total Paid:
+                    <strong class="text-success">
+                        ₹@TempData["Total"]
+                    </strong>
+                </p>
+            </div>
+
+            <a asp-controller="Products" asp-action="Index"
+               class="btn btn-primary px-5">
+                🛍️ Continue Shopping
+            </a>
+
+        </div>
+    </div>
+</div>
