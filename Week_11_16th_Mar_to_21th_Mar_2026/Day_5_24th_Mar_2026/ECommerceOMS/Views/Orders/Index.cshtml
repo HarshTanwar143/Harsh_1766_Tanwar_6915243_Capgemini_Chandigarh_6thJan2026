@@ -1,0 +1,68 @@
+﻿@model IEnumerable<ECommerceOMS.Models.Order>
+@{
+    ViewData["Title"] = "Orders";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h2>All Orders</h2>
+    <a asp-action="Create" class="btn btn-success">+ New Order</a>
+</div>
+
+<table class="table table-bordered table-hover shadow-sm">
+    <thead class="table-dark">
+        <tr>
+            <th>#</th>
+            <th>Customer</th>
+            <th>Date</th>
+            <th>Total</th>
+            <th>Status</th>
+            <th>Shipped?</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var o in Model)
+        {
+            <tr>
+                <td>@o.OrderId</td>
+                <td>@o.Customer?.FullName</td>
+                <td>@o.OrderDate.ToShortDateString()</td>
+                <td>₹@o.TotalAmount</td>
+                <td>
+                    @{
+                        var badgeColor = o.Status switch
+                        {
+                            OrderStatus.Pending => "bg-warning text-dark",
+                            OrderStatus.Processing => "bg-info text-dark",
+                            OrderStatus.Shipped => "bg-primary",
+                            OrderStatus.Delivered => "bg-success",
+                            OrderStatus.Cancelled => "bg-danger",
+                            _ => "bg-secondary"
+                        };
+                    }
+                    <span class="badge @badgeColor">@o.Status</span>
+                </td>
+                <td class="text-center">
+                    @(o.ShippingDetail?.IsDelivered == true ? "✅" : "⏳")
+                </td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@o.OrderId"
+                       class="btn btn-sm btn-info">View</a>
+
+                    @if (o.Status == OrderStatus.Pending || o.Status == OrderStatus.Processing)
+                    {
+                        <a asp-action="UpdateStatus" asp-route-id="@o.OrderId"
+                           asp-route-status="Shipped"
+                           class="btn btn-sm btn-primary ms-1">Mark Shipped</a>
+                    }
+                    @if (o.Status == OrderStatus.Shipped)
+                    {
+                        <a asp-action="UpdateStatus" asp-route-id="@o.OrderId"
+                           asp-route-status="Delivered"
+                           class="btn btn-sm btn-success ms-1">Mark Delivered</a>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

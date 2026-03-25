@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "New Order";
+}
+
+<h2>Place New Order</h2>
+<div class="card shadow-sm p-4">
+    <form asp-action="Create" method="post">
+        <div class="mb-3">
+            <label class="form-label">Customer</label>
+            <select name="customerId" class="form-select" required>
+                <option value="">-- Select Customer --</option>
+                @foreach (var item in (Microsoft.AspNetCore.Mvc.Rendering.SelectList)ViewBag.Customers)
+                {
+                    <option value="@item.Value">@item.Text</option>
+                }
+            </select>
+        </div>
+
+        <h5 class="mt-4">Select Products</h5>
+        <table class="table table-bordered">
+            <thead class="table-light"><tr><th>Product</th><th>Price</th><th>Quantity</th></tr></thead>
+            <tbody>
+                @foreach (var p in (List<ECommerceOMS.Models.Product>)ViewBag.Products)
+                {
+                    <tr>
+                        <td>
+                            @p.Name
+                            <input type="hidden" name="productIds" value="@p.ProductId" />
+                        </td>
+                        <td>₹@p.Price</td>
+                        <td><input type="number" name="quantities" value="0" min="0" max="@p.Stock" class="form-control form-control-sm" style="width:80px" /></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <button type="submit" class="btn btn-success mt-2">Place Order</button>
+        <a asp-action="Index" class="btn btn-secondary ms-2 mt-2">Cancel</a>
+    </form>
+</div>

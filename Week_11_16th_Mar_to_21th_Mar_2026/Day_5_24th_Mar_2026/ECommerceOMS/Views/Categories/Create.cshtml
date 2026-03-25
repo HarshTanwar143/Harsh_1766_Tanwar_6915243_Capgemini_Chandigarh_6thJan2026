@@ -1,0 +1,20 @@
+﻿@model ECommerceOMS.Models.Category
+@{
+    ViewData["Title"] = "Add Category";
+}
+<h2>Add Category</h2>
+<div class="card shadow-sm p-4" style="max-width:500px">
+    <form asp-action="Create">
+        <div class="mb-3">
+            <label asp-for="Name" class="form-label"></label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Description" class="form-label"></label>
+            <textarea asp-for="Description" class="form-control" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-success">Save</button>
+        <a asp-action="Index" class="btn btn-secondary ms-2">Cancel</a>
+    </form>
+</div>

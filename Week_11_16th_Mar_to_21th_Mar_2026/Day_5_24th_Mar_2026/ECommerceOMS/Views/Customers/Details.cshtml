@@ -1,0 +1,55 @@
+﻿@model ECommerceOMS.Models.Customer
+@{
+    ViewData["Title"] = "Order History";
+}
+
+<h2>@Model.FullName — Order History</h2>
+<p class="text-muted">@Model.Email | @Model.Phone</p>
+
+@if (!Model.Orders.Any())
+{
+    <div class="alert alert-info">No orders placed yet.</div>
+}
+else
+{
+    @foreach (var order in Model.Orders)
+    {
+        <div class="card mb-3 shadow-sm">
+            <div class="card-header d-flex justify-content-between">
+                <span>Order #@order.OrderId — @order.OrderDate.ToShortDateString()</span>
+                <span class="badge bg-@(order.Status == OrderStatus.Delivered ? "success" :
+                                                              order.Status == OrderStatus.Shipped ? "primary" :
+                                                              order.Status == OrderStatus.Cancelled ? "danger" : "warning")">
+                    @order.Status
+                </span>
+            </div>
+            <div class="card-body">
+                <table class="table table-sm">
+                    <thead><tr><th>Product</th><th>Qty</th><th>Unit Price</th><th>Subtotal</th></tr></thead>
+                    <tbody>
+                        @foreach (var item in order.OrderItems)
+                        {
+                            <tr>
+                                <td>@item.Product?.Name</td>
+                                <td>@item.Quantity</td>
+                                <td>₹@item.UnitPrice</td>
+                                <td>₹@(item.Quantity* item.UnitPrice)</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                <p class="fw-bold text-end">Total: ₹@order.TotalAmount</p>
+                @if (order.ShippingDetail != null)
+                {
+                    <p class="text-muted small">
+                        Shipping: @order.ShippingDetail.ShippingAddress |
+                        Tracking: @(order.ShippingDetail.TrackingNumber ?? "Not assigned") |
+                        Delivered: @(order.ShippingDetail.IsDelivered ? "Yes" : "No")
+                    </p>
+                }
+            </div>
+        </div>
+    }
+}
+
+<a asp-action="Index" class="btn btn-secondary">Back</a>

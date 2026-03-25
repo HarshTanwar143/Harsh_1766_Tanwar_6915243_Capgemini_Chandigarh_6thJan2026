@@ -1,0 +1,80 @@
+﻿@model ECommerceOMS.ViewModels.DashboardViewModel
+@using ECommerceOMS.Models
+@{
+    ViewData["Title"] = "Admin Dashboard";
+}
+
+<h2 class="mb-4">Admin Dashboard</h2>
+
+<!-- Summary Cards -->
+<div class="row g-3 mb-4">
+    <div class="col-md-4">
+        <div class="card text-white bg-primary shadow text-center p-3">
+            <h3>@Model.TotalOrders</h3>
+            <p class="mb-0">Total Orders</p>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card text-white bg-success shadow text-center p-3">
+            <h3>@Model.TotalCustomers</h3>
+            <p class="mb-0">Total Customers</p>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card text-white bg-warning shadow text-center p-3">
+            <h3>₹@Model.TotalRevenue</h3>
+            <p class="mb-0">Total Revenue</p>
+        </div>
+    </div>
+</div>
+
+<!-- Top Selling Products & Pending Orders -->
+<div class="row g-3">
+    <div class="col-md-6">
+        <div class="card shadow-sm">
+            <div class="card-header bg-dark text-white">Top 5 Selling Products</div>
+            <div class="card-body p-0">
+                <table class="table table-hover mb-0">
+                    <thead class="table-light">
+                        <tr><th>Product</th><th>Units Sold</th></tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var p in Model.TopProducts)
+                        {
+                            <tr>
+                                <td>@p.ProductName</td>
+                                <td><span class="badge bg-success">@p.TotalSold</span></td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="card shadow-sm">
+            <div class="card-header bg-warning text-dark">Pending / Processing Orders</div>
+            <div class="card-body p-0">
+                <table class="table table-hover mb-0">
+                    <thead class="table-light">
+                        <tr><th>#</th><th>Customer</th><th>Amount</th><th>Status</th></tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var o in Model.PendingOrders)
+                        {
+                            <tr>
+                                <td>@o.OrderId</td>
+                                <td>@o.Customer?.FullName</td>
+                                <td>₹@o.TotalAmount</td>
+                                <td>
+                                    <span class="badge bg-warning text-dark">@o.Status</span>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
