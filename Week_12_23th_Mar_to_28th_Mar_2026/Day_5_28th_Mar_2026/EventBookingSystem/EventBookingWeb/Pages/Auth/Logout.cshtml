@@ -1,0 +1,17 @@
+@page
+@{
+    ViewData["Title"] = "Logout";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head><title>Logging out...</title></head>
+<body>
+<script>
+localStorage.removeItem('token');
+localStorage.removeItem('fullName');
+localStorage.removeItem('email');
+window.location.href = '/Auth/Login';
+</script>
+</body>
+</html>

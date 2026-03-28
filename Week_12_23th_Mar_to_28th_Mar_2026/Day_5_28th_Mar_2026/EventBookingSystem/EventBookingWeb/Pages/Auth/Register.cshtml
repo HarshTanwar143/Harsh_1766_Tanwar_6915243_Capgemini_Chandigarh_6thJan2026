@@ -1,0 +1,128 @@
+@page
+@model EventBookingWeb.Pages.Auth.RegisterModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-5">
+        <div class="card shadow border-0">
+            <div class="card-header bg-primary text-white text-center py-3">
+                <h4 class="mb-0"><i class="bi bi-person-plus me-2"></i>Create Account</h4>
+            </div>
+            <div class="card-body p-4">
+                <div id="errorMsg" class="alert alert-danger d-none"></div>
+                <div id="successMsg" class="alert alert-success d-none"></div>
+
+                <div class="mb-3">
+                    <label class="form-label">Full Name</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="bi bi-person"></i></span>
+                        <input type="text" id="fullName" class="form-control" placeholder="Enter full name" />
+                    </div>
+                    <div class="invalid-feedback" id="fullNameErr"></div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Email Address</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                        <input type="email" id="email" class="form-control" placeholder="Enter email" />
+                    </div>
+                    <div class="invalid-feedback" id="emailErr"></div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Password</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="bi bi-lock"></i></span>
+                        <input type="password" id="password" class="form-control" placeholder="Min 6 characters" />
+                        <button class="btn btn-outline-secondary" type="button" onclick="togglePassword('password')">
+                            <i class="bi bi-eye"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <label class="form-label">Confirm Password</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="bi bi-lock-fill"></i></span>
+                        <input type="password" id="confirmPassword" class="form-control" placeholder="Repeat password" />
+                    </div>
+                    <div class="invalid-feedback" id="confirmErr"></div>
+                </div>
+
+                <button class="btn btn-primary w-100" onclick="register()">
+                    <i class="bi bi-person-plus me-2"></i>Register
+                </button>
+
+                <hr />
+                <p class="text-center mb-0">Already have an account? <a href="/Auth/Login">Login here</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+<script>
+const API = 'http://localhost:5100';
+
+function togglePassword(id) {
+    const el = document.getElementById(id);
+    el.type = el.type === 'password' ? 'text' : 'password';
+}
+
+async function register() {
+    clearErrors();
+    const fullName = document.getElementById('fullName').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const password = document.getElementById('password').value;
+    const confirm = document.getElementById('confirmPassword').value;
+
+    if (!fullName) { showFieldError('fullName', 'fullNameErr', 'Full name is required.'); return; }
+    if (!email) { showFieldError('email', 'emailErr', 'Email is required.'); return; }
+    if (password.length < 6) { showError('Password must be at least 6 characters.'); return; }
+    if (password !== confirm) { showFieldError('confirmPassword', 'confirmErr', 'Passwords do not match.'); return; }
+
+    try {
+        const res = await fetch(`${API}/api/auth/register`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ fullName, email, password })
+        });
+        const data = await res.json();
+        if (res.ok) {
+            document.getElementById('successMsg').textContent = 'Registration successful! Redirecting to login...';
+            document.getElementById('successMsg').classList.remove('d-none');
+            setTimeout(() => window.location.href = '/Auth/Login', 1500);
+        } else {
+            showError(data.message || 'Registration failed.');
+        }
+    } catch {
+        showError('Unable to connect to the server. Please ensure the API is running on http://localhost:5100');
+    }
+}
+
+function showError(msg) {
+    const el = document.getElementById('errorMsg');
+    el.textContent = msg;
+    el.classList.remove('d-none');
+}
+
+function showFieldError(fieldId, errId, msg) {
+    document.getElementById(fieldId).classList.add('is-invalid');
+    const err = document.getElementById(errId);
+    err.textContent = msg;
+    err.style.display = 'block';
+}
+
+function clearErrors() {
+    document.getElementById('errorMsg').classList.add('d-none');
+    document.getElementById('successMsg').classList.add('d-none');
+    ['fullName', 'email', 'confirmPassword'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.classList.remove('is-invalid');
+    });
+}
+</script>
+}

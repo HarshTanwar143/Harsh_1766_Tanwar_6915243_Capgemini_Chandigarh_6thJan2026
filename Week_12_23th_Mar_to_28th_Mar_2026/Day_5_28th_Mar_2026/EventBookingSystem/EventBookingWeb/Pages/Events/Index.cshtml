@@ -1,0 +1,279 @@
+@page
+@model EventBookingWeb.Pages.Events.IndexModel
+@{
+    ViewData["Title"] = "Events";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2 class="fw-bold"><i class="bi bi-calendar-event me-2 text-primary"></i>Available Events</h2>
+    <div class="d-flex align-items-center gap-2">
+        <span class="badge bg-primary fs-6" id="eventCount">Loading...</span>
+        <button class="btn btn-success" onclick="openAddEvent()">
+            <i class="bi bi-plus-circle me-1"></i>Add Event
+        </button>
+    </div>
+</div>
+
+<div id="loadingSpinner" class="text-center py-5">
+    <div class="spinner-border text-primary" role="status"></div>
+    <p class="mt-2 text-muted">Loading events...</p>
+</div>
+
+<div id="errorAlert" class="alert alert-danger d-none"></div>
+
+<div id="eventsContainer" class="row g-4 d-none"></div>
+
+
+<div id="bookingModal" class="modal fade" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title"><i class="bi bi-ticket-perforated me-2"></i>Book Tickets</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div id="bookingError" class="alert alert-danger d-none"></div>
+                <div id="bookingSuccess" class="alert alert-success d-none"></div>
+                <p><strong id="modalEventTitle"></strong></p>
+                <p class="text-muted"><i class="bi bi-geo-alt me-1"></i><span id="modalLocation"></span> &nbsp;|&nbsp; <i class="bi bi-calendar me-1"></i><span id="modalDate"></span></p>
+                <p>Available Seats: <strong id="modalSeats" class="text-success"></strong></p>
+                <div class="mb-3">
+                    <label class="form-label">Number of Seats</label>
+                    <input type="number" id="seatsInput" class="form-control" min="1" max="100" value="1" />
+                    <div class="invalid-feedback" id="seatsError"></div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button class="btn btn-primary" onclick="confirmBooking()">
+                    <i class="bi bi-check-circle me-1"></i>Confirm Booking
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="addEventModal" class="modal fade" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-success text-white">
+                <h5 class="modal-title"><i class="bi bi-calendar-plus me-2"></i>Add New Event</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div id="addEventError" class="alert alert-danger d-none"></div>
+                <div id="addEventSuccess" class="alert alert-success d-none"></div>
+                <div class="mb-3">
+                    <label class="form-label fw-semibold">Event Title <span class="text-danger">*</span></label>
+                    <input type="text" id="newTitle" class="form-control" placeholder="e.g. Tech Summit 2027" />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label fw-semibold">Description</label>
+                    <textarea id="newDescription" class="form-control" rows="3" placeholder="Brief description of the event"></textarea>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label fw-semibold">Date &amp; Time <span class="text-danger">*</span></label>
+                        <input type="datetime-local" id="newDate" class="form-control" />
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label fw-semibold">Available Seats <span class="text-danger">*</span></label>
+                        <input type="number" id="newSeats" class="form-control" min="1" max="10000" placeholder="e.g. 100" />
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label fw-semibold">Location <span class="text-danger">*</span></label>
+                    <input type="text" id="newLocation" class="form-control" placeholder="e.g. New Delhi" />
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button class="btn btn-success" onclick="submitAddEvent()">
+                    <i class="bi bi-check-circle me-1"></i>Create Event
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+<script>
+const API = 'http://localhost:5100';
+let selectedEvent = null;
+let modal = null;
+let addEventModal = null;
+
+document.addEventListener('DOMContentLoaded', () => {
+    modal = new bootstrap.Modal(document.getElementById('bookingModal'));
+    addEventModal = new bootstrap.Modal(document.getElementById('addEventModal'));
+    loadEvents();
+});
+
+async function loadEvents() {
+    try {
+        const res = await fetch(`${API}/api/events`);
+        const events = await res.json();
+        document.getElementById('loadingSpinner').classList.add('d-none');
+        document.getElementById('eventsContainer').classList.remove('d-none');
+        document.getElementById('eventCount').textContent = `${events.length} Events`;
+
+        if (events.length === 0) {
+            document.getElementById('eventsContainer').innerHTML = '<p class="text-muted">No events available.</p>';
+            return;
+        }
+
+        const container = document.getElementById('eventsContainer');
+        container.innerHTML = events.map(e => `
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0 event-card">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold text-primary">${e.title}</h5>
+                        <p class="card-text text-muted flex-grow-1">${e.description}</p>
+                        <ul class="list-unstyled mb-3">
+                            <li><i class="bi bi-calendar text-primary me-2"></i>${new Date(e.date).toLocaleDateString('en-IN', {day:'numeric',month:'long',year:'numeric'})}</li>
+                            <li><i class="bi bi-geo-alt text-danger me-2"></i>${e.location}</li>
+                            <li><i class="bi bi-people text-success me-2"></i><strong>${e.availableSeats}</strong> seats left</li>
+                        </ul>
+                        <button class="btn btn-primary w-100" onclick="openBooking(${JSON.stringify(e).replace(/"/g,'&quot;')})">
+                            <i class="bi bi-ticket-perforated me-1"></i>Book Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        `).join('');
+    } catch {
+        document.getElementById('loadingSpinner').classList.add('d-none');
+        document.getElementById('errorAlert').textContent = 'Failed to load events. Please ensure the API is running.';
+        document.getElementById('errorAlert').classList.remove('d-none');
+    }
+}
+
+function openBooking(ev) {
+    const token = localStorage.getItem('token');
+    if (!token) {
+        window.location.href = '/Auth/Login';
+        return;
+    }
+    selectedEvent = ev;
+    document.getElementById('modalEventTitle').textContent = ev.title;
+    document.getElementById('modalLocation').textContent = ev.location;
+    document.getElementById('modalDate').textContent = new Date(ev.date).toLocaleDateString('en-IN');
+    document.getElementById('modalSeats').textContent = ev.availableSeats;
+    document.getElementById('seatsInput').max = ev.availableSeats;
+    document.getElementById('seatsInput').value = 1;
+    document.getElementById('bookingError').classList.add('d-none');
+    document.getElementById('bookingSuccess').classList.add('d-none');
+    modal.show();
+}
+
+async function confirmBooking() {
+    const seats = parseInt(document.getElementById('seatsInput').value);
+    document.getElementById('bookingError').classList.add('d-none');
+    document.getElementById('seatsInput').classList.remove('is-invalid');
+
+    if (!seats || seats < 1) {
+        document.getElementById('seatsInput').classList.add('is-invalid');
+        document.getElementById('seatsError').textContent = 'Please enter at least 1 seat.';
+        return;
+    }
+    if (seats > selectedEvent.availableSeats) {
+        document.getElementById('seatsInput').classList.add('is-invalid');
+        document.getElementById('seatsError').textContent = `Only ${selectedEvent.availableSeats} seats available.`;
+        return;
+    }
+
+    const token = localStorage.getItem('token');
+    try {
+        const res = await fetch(`${API}/api/bookings`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${token}` },
+            body: JSON.stringify({ eventId: selectedEvent.id, seatsBooked: seats })
+        });
+        const data = await res.json();
+        if (res.ok) {
+            document.getElementById('bookingSuccess').textContent = `Successfully booked ${seats} seat(s) for "${selectedEvent.title}"!`;
+            document.getElementById('bookingSuccess').classList.remove('d-none');
+            setTimeout(() => { modal.hide(); loadEvents(); }, 2000);
+        } else {
+            document.getElementById('bookingError').textContent = data.message || 'Booking failed.';
+            document.getElementById('bookingError').classList.remove('d-none');
+        }
+    } catch {
+        document.getElementById('bookingError').textContent = 'Connection error. Please try again.';
+        document.getElementById('bookingError').classList.remove('d-none');
+    }
+}
+
+function openAddEvent() {
+    document.getElementById('newTitle').value = '';
+    document.getElementById('newDescription').value = '';
+    document.getElementById('newDate').value = '';
+    document.getElementById('newSeats').value = '';
+    document.getElementById('newLocation').value = '';
+    document.getElementById('addEventError').classList.add('d-none');
+    document.getElementById('addEventSuccess').classList.add('d-none');
+    addEventModal.show();
+}
+
+async function submitAddEvent() {
+    const title = document.getElementById('newTitle').value.trim();
+    const description = document.getElementById('newDescription').value.trim();
+    const date = document.getElementById('newDate').value;
+    const seats = parseInt(document.getElementById('newSeats').value);
+    const location = document.getElementById('newLocation').value.trim();
+
+    document.getElementById('addEventError').classList.add('d-none');
+
+    if (!title) {
+        document.getElementById('addEventError').textContent = 'Event title is required.';
+        document.getElementById('addEventError').classList.remove('d-none');
+        return;
+    }
+    if (!date || new Date(date) <= new Date()) {
+        document.getElementById('addEventError').textContent = 'Please select a future date and time.';
+        document.getElementById('addEventError').classList.remove('d-none');
+        return;
+    }
+    if (!seats || seats < 1 || seats > 10000) {
+        document.getElementById('addEventError').textContent = 'Seats must be between 1 and 10000.';
+        document.getElementById('addEventError').classList.remove('d-none');
+        return;
+    }
+    if (!location) {
+        document.getElementById('addEventError').textContent = 'Location is required.';
+        document.getElementById('addEventError').classList.remove('d-none');
+        return;
+    }
+
+    try {
+        const res = await fetch(`${API}/api/events`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                title,
+                description,
+                date: new Date(date).toISOString(),
+                location,
+                availableSeats: seats
+            })
+        });
+        const data = await res.json();
+        if (res.ok) {
+            document.getElementById('addEventSuccess').textContent = `Event "${data.title}" created successfully!`;
+            document.getElementById('addEventSuccess').classList.remove('d-none');
+            setTimeout(() => { addEventModal.hide(); loadEvents(); }, 1500);
+        } else {
+            const msg = data.errors
+                ? Object.values(data.errors).flat().join(' ')
+                : (data.title || data.message || 'Failed to create event.');
+            document.getElementById('addEventError').textContent = msg;
+            document.getElementById('addEventError').classList.remove('d-none');
+        }
+    } catch {
+        document.getElementById('addEventError').textContent = 'Connection error. Please ensure the API is running.';
+        document.getElementById('addEventError').classList.remove('d-none');
+    }
+}
+</script>
+}

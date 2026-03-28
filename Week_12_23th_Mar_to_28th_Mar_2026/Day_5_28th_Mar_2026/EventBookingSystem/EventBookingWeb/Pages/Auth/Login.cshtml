@@ -1,0 +1,95 @@
+@page
+@model EventBookingWeb.Pages.Auth.LoginModel
+@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-5">
+        <div class="card shadow border-0">
+            <div class="card-header bg-primary text-white text-center py-3">
+                <h4 class="mb-0"><i class="bi bi-box-arrow-in-right me-2"></i>Sign In</h4>
+            </div>
+            <div class="card-body p-4">
+                <div id="errorMsg" class="alert alert-danger d-none"></div>
+
+                <div class="mb-3">
+                    <label class="form-label">Email Address</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                        <input type="email" id="email" class="form-control" placeholder="Enter email" />
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <label class="form-label">Password</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="bi bi-lock"></i></span>
+                        <input type="password" id="password" class="form-control" placeholder="Enter password" />
+                        <button class="btn btn-outline-secondary" type="button" onclick="togglePassword()">
+                            <i class="bi bi-eye"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary w-100" onclick="login()">
+                    <i class="bi bi-box-arrow-in-right me-2"></i>Login
+                </button>
+
+                <hr />
+                <p class="text-center mb-0">Don't have an account? <a href="/Auth/Register">Register here</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+<script>
+const API = 'http://localhost:5100';
+
+function togglePassword() {
+    const el = document.getElementById('password');
+    el.type = el.type === 'password' ? 'text' : 'password';
+}
+
+async function login() {
+    document.getElementById('errorMsg').classList.add('d-none');
+    const email = document.getElementById('email').value.trim();
+    const password = document.getElementById('password').value;
+
+    if (!email || !password) {
+        showError('Please enter email and password.');
+        return;
+    }
+
+    try {
+        const res = await fetch(`${API}/api/auth/login`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email, password })
+        });
+        const data = await res.json();
+        if (res.ok) {
+            localStorage.setItem('token', data.token);
+            localStorage.setItem('fullName', data.fullName);
+            localStorage.setItem('email', data.email);
+            window.location.href = '/Events';
+        } else {
+            showError(data.message || 'Invalid email or password.');
+        }
+    } catch {
+        showError('Unable to connect to the server. Please ensure the API is running on http://localhost:5100');
+    }
+}
+
+function showError(msg) {
+    const el = document.getElementById('errorMsg');
+    el.textContent = msg;
+    el.classList.remove('d-none');
+}
+
+document.getElementById('password').addEventListener('keypress', e => {
+    if (e.key === 'Enter') login();
+});
+</script>
+}

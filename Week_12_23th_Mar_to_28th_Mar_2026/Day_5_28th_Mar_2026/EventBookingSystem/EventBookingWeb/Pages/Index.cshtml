@@ -1,0 +1,49 @@
+@page
+@model EventBookingWeb.Pages.IndexModel
+@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="text-center py-5">
+    <div class="mb-4">
+        <i class="bi bi-calendar-event text-primary" style="font-size: 5rem;"></i>
+    </div>
+    <h1 class="display-4 fw-bold">Welcome to EventHub</h1>
+    <p class="lead text-muted mb-4">Discover and book tickets for the best events near you.</p>
+    <a href="/Events" class="btn btn-primary btn-lg me-2">
+        <i class="bi bi-search me-2"></i>Browse Events
+    </a>
+    <a href="/Auth/Register" class="btn btn-outline-primary btn-lg">
+        <i class="bi bi-person-plus me-2"></i>Get Started
+    </a>
+</div>
+
+<div class="row g-4 mt-3">
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0">
+            <div class="card-body text-center p-4">
+                <i class="bi bi-search text-primary fs-1 mb-3"></i>
+                <h5 class="card-title">Browse Events</h5>
+                <p class="card-text text-muted">Explore upcoming events across India. Filter by location and date.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0">
+            <div class="card-body text-center p-4">
+                <i class="bi bi-ticket-perforated text-success fs-1 mb-3"></i>
+                <h5 class="card-title">Book Tickets</h5>
+                <p class="card-text text-muted">Instantly book your seats. Get confirmation right away.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0">
+            <div class="card-body text-center p-4">
+                <i class="bi bi-person-check text-warning fs-1 mb-3"></i>
+                <h5 class="card-title">Manage Bookings</h5>
+                <p class="card-text text-muted">View and cancel your bookings anytime from your dashboard.</p>
+            </div>
+        </div>
+    </div>
+</div>
