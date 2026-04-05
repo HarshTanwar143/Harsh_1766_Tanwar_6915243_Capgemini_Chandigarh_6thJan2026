@@ -1,0 +1,25 @@
+@model List<PrescriptionViewModel>
+@{ ViewData["Title"] = "Prescriptions"; }
+<h4 class="fw-bold mb-4"><i class="bi bi-prescription me-2 text-primary"></i>All Prescriptions</h4>
+<div class="card">
+  <div class="card-body p-0">
+    <table class="table table-hover mb-0">
+      <thead><tr><th>#</th><th>Patient</th><th>Doctor</th><th>Diagnosis</th><th>Medicines</th><th>Medicine Charges</th><th>Approved</th><th>Date</th></tr></thead>
+      <tbody>
+      @foreach (var p in Model)
+      {
+        <tr>
+          <td>@p.PrescriptionId</td>
+          <td>@p.PatientName</td>
+          <td>Dr. @p.DoctorName</td>
+          <td>@(p.Diagnosis ?? "-")</td>
+          <td>@(p.Medicines ?? "-")</td>
+          <td>₹@p.MedicineCharges.ToString("F2")</td>
+          <td><span class="badge @(p.IsApproved?"bg-success":"bg-secondary")">@(p.IsApproved?"Approved":"Pending")</span></td>
+          <td>@p.CreatedAt.ToString("dd MMM yyyy")</td>
+        </tr>
+      }
+      </tbody>
+    </table>
+  </div>
+</div>

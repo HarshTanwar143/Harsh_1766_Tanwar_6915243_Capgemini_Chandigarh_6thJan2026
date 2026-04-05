@@ -1,0 +1,56 @@
+@model PrescriptionViewModel
+@{ ViewData["Title"] = "View Prescription"; }
+<div class="row justify-content-center">
+  <div class="col-md-7">
+    <div class="card p-4">
+      <div class="d-flex justify-content-between align-items-start mb-3">
+        <div>
+          <h5 class="fw-bold mb-1"><i class="bi bi-prescription me-2 text-primary"></i>Prescription Details</h5>
+          <p class="text-muted mb-0">Appointment #@Model.AppointmentId</p>
+        </div>
+        <span class="badge @(Model.IsApproved?"bg-success fs-6":"bg-warning text-dark fs-6")">
+          @(Model.IsApproved ? "✅ Approved" : "⏳ Pending Approval")
+        </span>
+      </div>
+      <hr/>
+      <div class="row mb-3">
+        <div class="col-6"><strong>Patient:</strong> @Model.PatientName</div>
+        <div class="col-6"><strong>Doctor:</strong> Dr. @Model.DoctorName</div>
+      </div>
+      <div class="mb-3">
+        <strong>Diagnosis:</strong>
+        <p class="mt-1 p-2 bg-light rounded">@(Model.Diagnosis ?? "Not specified")</p>
+      </div>
+      <div class="mb-3">
+        <strong>Medicines:</strong>
+        <pre class="mt-1 p-2 bg-light rounded" style="white-space:pre-wrap;font-family:inherit;">@(Model.Medicines ?? "Not specified")</pre>
+      </div>
+      <div class="mb-3">
+        <strong>Notes:</strong>
+        <p class="mt-1 p-2 bg-light rounded">@(Model.Notes ?? "-")</p>
+      </div>
+      <div class="mb-3">
+        <strong>Medicine Charges:</strong> <span class="text-success fw-bold">₹@Model.MedicineCharges.ToString("F2")</span>
+      </div>
+      <div class="mb-3">
+        <strong>Created:</strong> @Model.CreatedAt.ToString("dd MMM yyyy HH:mm")
+      </div>
+      @if (!Model.IsApproved)
+      {
+        <hr/>
+        <div class="alert alert-warning py-2">
+          <i class="bi bi-exclamation-triangle me-1"></i>
+          Approving this prescription will <strong>complete the appointment</strong> and <strong>generate a bill</strong> for ₹500 (consultation) + medicine charges.
+        </div>
+        <a href="/Doctor/ApprovePrescription?id=@Model.PrescriptionId" class="btn btn-success me-2">
+          <i class="bi bi-check-circle me-1"></i>Approve & Generate Bill
+        </a>
+      }
+      else
+      {
+        <div class="alert alert-success py-2"><i class="bi bi-check-circle me-1"></i>Prescription approved. Bill has been generated.</div>
+      }
+      <a href="/Doctor/Appointments" class="btn btn-outline-secondary mt-2">← Back</a>
+    </div>
+  </div>
+</div>

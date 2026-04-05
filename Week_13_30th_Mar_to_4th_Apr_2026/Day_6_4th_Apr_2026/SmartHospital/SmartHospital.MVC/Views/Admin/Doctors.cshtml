@@ -1,0 +1,34 @@
+@model List<DoctorViewModel>
+@{ ViewData["Title"] = "Doctors"; }
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h4 class="fw-bold"><i class="bi bi-person-badge me-2 text-primary"></i>Doctors</h4>
+    <a href="/Admin/CreateDoctor" class="btn btn-primary"><i class="bi bi-plus-lg me-1"></i>Add Doctor</a>
+</div>
+<div class="card">
+  <div class="card-body p-0">
+    <table class="table table-hover mb-0">
+      <thead><tr><th>#</th><th>Name</th><th>Email</th><th>Department</th><th>Specialization</th><th>Experience</th><th>Availability</th><th>Actions</th></tr></thead>
+      <tbody>
+      @foreach (var d in Model)
+      {
+        <tr>
+          <td>@d.DoctorId</td>
+          <td class="fw-semibold">Dr. @d.DoctorName</td>
+          <td>@d.Email</td>
+          <td><span class="badge bg-info text-dark">@d.DepartmentName</span></td>
+          <td>@(d.Specialization ?? "-")</td>
+          <td>@d.ExperienceYears yrs</td>
+          <td>@(d.Availability ?? "-")</td>
+          <td>
+            <a href="/Admin/EditDoctor/@d.DoctorId" class="btn btn-sm btn-outline-secondary me-1"><i class="bi bi-pencil"></i></a>
+            <form asp-action="DeleteDoctor" method="post" style="display:inline" onsubmit="return confirm('Delete Dr. @d.DoctorName?')">
+              <input type="hidden" name="id" value="@d.DoctorId"/>
+              <button class="btn btn-sm btn-outline-danger"><i class="bi bi-trash"></i></button>
+            </form>
+          </td>
+        </tr>
+      }
+      </tbody>
+    </table>
+  </div>
+</div>

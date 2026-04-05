@@ -1,0 +1,50 @@
+@model List<AppointmentViewModel>
+@{ ViewData["Title"] = "My Appointments"; }
+<h4 class="fw-bold mb-4"><i class="bi bi-calendar-check me-2 text-primary"></i>My Appointments</h4>
+<div class="card">
+  <div class="card-body p-0">
+    <table class="table table-hover mb-0">
+      <thead><tr><th>#</th><th>Patient</th><th>Date</th><th>Status</th><th>Prescription</th><th>Actions</th></tr></thead>
+      <tbody>
+      @foreach (var a in Model)
+      {
+        <tr>
+          <td>@a.AppointmentId</td>
+          <td class="fw-semibold">@a.PatientName</td>
+          <td>@a.AppointmentDate.ToString("dd MMM yyyy HH:mm")</td>
+          <td><span class="badge @(a.Status=="Completed"?"bg-success":a.Status=="Cancelled"?"bg-danger":"bg-primary")">@a.Status</span></td>
+          <td>
+            @if (a.HasPrescription)
+            { <span class="badge bg-success"><i class="bi bi-check2"></i> Done</span> }
+            else
+            { <span class="badge bg-secondary">Pending</span> }
+          </td>
+          <td class="d-flex gap-1 flex-wrap">
+            @if (a.Status == "Booked")
+            {
+              if (!a.HasPrescription)
+              {
+                <a href="/Doctor/CreatePrescription?appointmentId=@a.AppointmentId" class="btn btn-sm btn-outline-primary">
+                  <i class="bi bi-prescription me-1"></i>Add Rx
+                </a>
+              }
+              else
+              {
+                <a href="/Doctor/ViewPrescription?appointmentId=@a.AppointmentId" class="btn btn-sm btn-outline-info">
+                  <i class="bi bi-eye me-1"></i>View Rx
+                </a>
+              }
+            }
+            @if (a.HasPrescription)
+            {
+              <a href="/Doctor/ViewPrescription?appointmentId=@a.AppointmentId" class="btn btn-sm btn-outline-info">
+                <i class="bi bi-eye me-1"></i>View Rx
+              </a>
+            }
+          </td>
+        </tr>
+      }
+      </tbody>
+    </table>
+  </div>
+</div>

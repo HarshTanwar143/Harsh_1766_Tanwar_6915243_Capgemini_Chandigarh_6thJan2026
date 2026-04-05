@@ -1,0 +1,44 @@
+@model DoctorViewModel
+@{ ViewData["Title"] = "Edit Doctor"; }
+<div class="row justify-content-center">
+  <div class="col-md-7">
+    <div class="card p-4">
+      <h5 class="fw-bold mb-3"><i class="bi bi-pencil me-2"></i>Edit Doctor: @Model.DoctorName</h5>
+      <form asp-action="EditDoctor" method="post">
+        <input asp-for="DoctorId" type="hidden"/>
+        <input asp-for="UserId" type="hidden"/>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label class="form-label fw-semibold">Name</label>
+            <input asp-for="DoctorName" class="form-control" readonly/>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label fw-semibold">Department</label>
+            <select asp-for="DepartmentId" class="form-select">
+              @foreach (var d in ViewBag.Departments as List<SmartHospital.MVC.ViewModels.DepartmentViewModel> ?? new())
+              {
+                <option value="@d.DepartmentId" selected="@(d.DepartmentId == Model.DepartmentId ? "selected" : null)">@d.DepartmentName</option>
+              }
+            </select>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label fw-semibold">Specialization</label>
+            <input asp-for="Specialization" class="form-control"/>
+          </div>
+          <div class="col-md-3">
+            <label class="form-label fw-semibold">Experience (Yrs)</label>
+            <input asp-for="ExperienceYears" type="number" class="form-control" min="0"/>
+          </div>
+          <div class="col-md-3">
+            <label class="form-label fw-semibold">Availability</label>
+            <input asp-for="Availability" class="form-control"/>
+          </div>
+        </div>
+        <div class="d-flex gap-2 mt-4">
+          <button type="submit" class="btn btn-primary">Update</button>
+          <a href="/Admin/Doctors" class="btn btn-outline-secondary">Cancel</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

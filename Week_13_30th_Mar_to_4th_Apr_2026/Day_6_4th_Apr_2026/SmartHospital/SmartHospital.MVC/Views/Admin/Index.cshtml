@@ -1,0 +1,89 @@
+@{ ViewData["Title"] = "Admin Dashboard"; }
+@{
+    var depts = ViewBag.Departments as List<SmartHospital.MVC.ViewModels.DepartmentViewModel> ?? new();
+    var doctors = ViewBag.Doctors as List<SmartHospital.MVC.ViewModels.DoctorViewModel> ?? new();
+    var patients = ViewBag.Patients as List<SmartHospital.MVC.ViewModels.UserViewModel> ?? new();
+    var appts = ViewBag.Appointments as List<SmartHospital.MVC.ViewModels.AppointmentViewModel> ?? new();
+    var bills = ViewBag.Bills as List<SmartHospital.MVC.ViewModels.BillViewModel> ?? new();
+}
+
+<h4 class="fw-bold mb-4"><i class="bi bi-speedometer2 me-2 text-primary"></i>Admin Dashboard</h4>
+
+<div class="row g-3 mb-4">
+    <div class="col-md-3">
+        <div class="card stat-card p-3">
+            <div class="d-flex justify-content-between align-items-center">
+                <div><div class="small opacity-75">Departments</div><div class="fs-2 fw-bold">@depts.Count</div></div>
+                <i class="bi bi-building fs-1 opacity-50"></i>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card stat-card green p-3">
+            <div class="d-flex justify-content-between align-items-center">
+                <div><div class="small opacity-75">Doctors</div><div class="fs-2 fw-bold">@doctors.Count</div></div>
+                <i class="bi bi-person-badge fs-1 opacity-50"></i>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card stat-card orange p-3">
+            <div class="d-flex justify-content-between align-items-center">
+                <div><div class="small opacity-75">Patients</div><div class="fs-2 fw-bold">@patients.Count</div></div>
+                <i class="bi bi-people fs-1 opacity-50"></i>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card stat-card blue p-3">
+            <div class="d-flex justify-content-between align-items-center">
+                <div><div class="small opacity-75">Appointments</div><div class="fs-2 fw-bold">@appts.Count</div></div>
+                <i class="bi bi-calendar-check fs-1 opacity-50"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row g-3">
+    <div class="col-md-6">
+        <div class="card p-3">
+            <h6 class="fw-bold mb-3"><i class="bi bi-calendar-check me-2"></i>Recent Appointments</h6>
+            <table class="table table-sm table-hover">
+                <thead><tr><th>Patient</th><th>Doctor</th><th>Date</th><th>Status</th></tr></thead>
+                <tbody>
+                @foreach (var a in appts.Take(5))
+                {
+                    <tr>
+                        <td>@a.PatientName</td>
+                        <td>Dr. @a.DoctorName</td>
+                        <td>@a.AppointmentDate.ToString("dd MMM yyyy")</td>
+                        <td><span class="badge badge-@a.Status.ToLower()">@a.Status</span></td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+            <a href="/Admin/Appointments" class="btn btn-sm btn-outline-primary">View All</a>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card p-3">
+            <h6 class="fw-bold mb-3"><i class="bi bi-receipt me-2"></i>Recent Bills</h6>
+            <table class="table table-sm table-hover">
+                <thead><tr><th>Patient</th><th>Total</th><th>Status</th></tr></thead>
+                <tbody>
+                @foreach (var b in bills.Take(5))
+                {
+                    <tr>
+                        <td>@b.PatientName</td>
+                        <td>₹@b.TotalAmount.ToString("F2")</td>
+                        <td>
+                            <span class="badge @(b.PaymentStatus == "Paid" ? "bg-success" : "bg-warning text-dark")">@b.PaymentStatus</span>
+                        </td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+            <a href="/Admin/Bills" class="btn btn-sm btn-outline-primary">View All</a>
+        </div>
+    </div>
+</div>

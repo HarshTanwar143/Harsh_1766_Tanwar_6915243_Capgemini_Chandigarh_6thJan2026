@@ -1,0 +1,64 @@
+@model LoginViewModel
+@{ ViewData["Title"] = "Login"; Layout = null; }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Login - Smart Hospital</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"/>
+    <style>
+        body { background: linear-gradient(135deg, #1a2942 0%, #2d4a7a 100%); min-height:100vh; display:flex; align-items:center; }
+        .login-card { border-radius:16px; box-shadow:0 20px 60px rgba(0,0,0,.3); }
+    </style>
+</head>
+<body>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-5">
+      <div class="card login-card p-4">
+        <div class="text-center mb-4">
+          <i class="bi bi-hospital" style="font-size:3rem;color:#4facfe;"></i>
+          <h3 class="mt-2 fw-bold">Smart Hospital</h3>
+          <p class="text-muted">Management System</p>
+        </div>
+        <form asp-action="Login" method="post">
+          <div asp-validation-summary="ModelOnly" class="alert alert-danger py-2 d-none" id="errSummary"></div>
+          <div class="mb-3">
+            <label class="form-label fw-semibold">Email</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+              <input asp-for="Email" class="form-control" placeholder="admin@hospital.com"/>
+            </div>
+            <span asp-validation-for="Email" class="text-danger small"></span>
+          </div>
+          <div class="mb-4">
+            <label class="form-label fw-semibold">Password</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="bi bi-lock"></i></span>
+              <input asp-for="Password" type="password" class="form-control" placeholder="••••••••"/>
+            </div>
+            <span asp-validation-for="Password" class="text-danger small"></span>
+          </div>
+          <button type="submit" class="btn btn-primary w-100 py-2 fw-semibold">
+            <i class="bi bi-box-arrow-in-right me-2"></i>Login
+          </button>
+        </form>
+        <hr/>
+        <p class="text-center mb-2">New patient? <a asp-action="Register">Register here</a></p>
+        <div class="p-2 bg-light rounded small text-muted">
+          <strong>Demo Credentials:</strong><br/>
+          Admin: admin@hospital.com / Admin@123
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  var summary = document.querySelector('[data-valmsg-summary]') || document.querySelector('.validation-summary-errors');
+  if(summary && summary.querySelector('li')) summary.classList.remove('d-none');
+</script>
+</body>
+</html>

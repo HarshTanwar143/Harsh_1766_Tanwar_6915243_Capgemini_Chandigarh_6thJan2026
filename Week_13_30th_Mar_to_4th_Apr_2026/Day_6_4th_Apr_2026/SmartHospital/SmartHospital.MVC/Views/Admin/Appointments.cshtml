@@ -1,0 +1,29 @@
+@model List<AppointmentViewModel>
+@{ ViewData["Title"] = "All Appointments"; }
+<h4 class="fw-bold mb-4"><i class="bi bi-calendar-check me-2 text-primary"></i>All Appointments</h4>
+<div class="card">
+  <div class="card-body p-0">
+    <table class="table table-hover mb-0">
+      <thead><tr><th>#</th><th>Patient</th><th>Doctor</th><th>Department</th><th>Date</th><th>Status</th><th>Prescription</th><th>Bill</th></tr></thead>
+      <tbody>
+      @foreach (var a in Model)
+      {
+        <tr>
+          <td>@a.AppointmentId</td>
+          <td>@a.PatientName</td>
+          <td>Dr. @a.DoctorName</td>
+          <td>@a.DepartmentName</td>
+          <td>@a.AppointmentDate.ToString("dd MMM yyyy HH:mm")</td>
+          <td>
+            <span class="badge @(a.Status=="Completed"?"bg-success":a.Status=="Cancelled"?"bg-danger":"bg-primary")">
+              @a.Status
+            </span>
+          </td>
+          <td>@(a.HasPrescription ? "✅" : "❌")</td>
+          <td>@(a.HasBill ? "✅" : "❌")</td>
+        </tr>
+      }
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,57 @@
+@model List<AppointmentViewModel>
+@{ ViewData["Title"] = "Doctor Dashboard"; }
+<h4 class="fw-bold mb-4"><i class="bi bi-speedometer2 me-2 text-primary"></i>Doctor Dashboard</h4>
+<div class="row g-3 mb-4">
+  <div class="col-md-3">
+    <div class="card stat-card p-3">
+      <div class="d-flex justify-content-between align-items-center">
+        <div><div class="small opacity-75">Total Appointments</div><div class="fs-2 fw-bold">@Model.Count</div></div>
+        <i class="bi bi-calendar-check fs-1 opacity-50"></i>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="card stat-card green p-3">
+      <div class="d-flex justify-content-between align-items-center">
+        <div><div class="small opacity-75">Completed</div><div class="fs-2 fw-bold">@Model.Count(a=>a.Status=="Completed")</div></div>
+        <i class="bi bi-check-circle fs-1 opacity-50"></i>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="card stat-card blue p-3">
+      <div class="d-flex justify-content-between align-items-center">
+        <div><div class="small opacity-75">Booked</div><div class="fs-2 fw-bold">@Model.Count(a=>a.Status=="Booked")</div></div>
+        <i class="bi bi-clock fs-1 opacity-50"></i>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="card stat-card orange p-3">
+      <div class="d-flex justify-content-between align-items-center">
+        <div><div class="small opacity-75">Prescriptions Given</div><div class="fs-2 fw-bold">@Model.Count(a=>a.HasPrescription)</div></div>
+        <i class="bi bi-prescription fs-1 opacity-50"></i>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-body">
+    <h6 class="fw-bold mb-3">Today's Appointments</h6>
+    <table class="table table-hover">
+      <thead><tr><th>Patient</th><th>Date</th><th>Status</th><th>Actions</th></tr></thead>
+      <tbody>
+      @foreach (var a in Model.Where(x => x.AppointmentDate.Date >= DateTime.Today).Take(5))
+      {
+        <tr>
+          <td class="fw-semibold">@a.PatientName</td>
+          <td>@a.AppointmentDate.ToString("dd MMM yyyy HH:mm")</td>
+          <td><span class="badge @(a.Status=="Completed"?"bg-success":a.Status=="Cancelled"?"bg-danger":"bg-primary")">@a.Status</span></td>
+          <td><a href="/Doctor/Appointments" class="btn btn-sm btn-outline-primary">Manage</a></td>
+        </tr>
+      }
+      </tbody>
+    </table>
+    <a href="/Doctor/Appointments" class="btn btn-sm btn-outline-primary">View All Appointments</a>
+  </div>
+</div>

@@ -1,0 +1,39 @@
+@model ApprovePrescriptionViewModel
+@{ ViewData["Title"] = "Approve Prescription"; }
+@{
+    var prescription = ViewBag.Prescription as SmartHospital.MVC.ViewModels.PrescriptionViewModel;
+}
+<div class="row justify-content-center">
+  <div class="col-md-6">
+    <div class="card p-4">
+      <h5 class="fw-bold mb-3"><i class="bi bi-check-circle me-2 text-success"></i>Approve Prescription & Generate Bill</h5>
+      @if (prescription != null)
+      {
+        <div class="mb-3 p-3 bg-light rounded">
+          <div><strong>Patient:</strong> @prescription.PatientName</div>
+          <div><strong>Diagnosis:</strong> @(prescription.Diagnosis ?? "-")</div>
+          <div><strong>Medicines:</strong> @(prescription.Medicines ?? "-")</div>
+        </div>
+      }
+      <div class="alert alert-info py-2 small">
+        <i class="bi bi-info-circle me-1"></i>
+        Bill = <strong>₹500 consultation fee</strong> + medicine charges you enter below.
+      </div>
+      <form asp-action="ApprovePrescription" method="post">
+        <input asp-for="PrescriptionId" type="hidden"/>
+        <div class="mb-4">
+          <label class="form-label fw-semibold">Medicine Charges (₹) <span class="text-danger">*</span></label>
+          <input asp-for="MedicineCharges" type="number" step="0.01" class="form-control form-control-lg" placeholder="0.00"/>
+          <span asp-validation-for="MedicineCharges" class="text-danger small"></span>
+          <div class="mt-1 text-muted small">Total bill = ₹500 + this amount</div>
+        </div>
+        <div class="d-flex gap-2">
+          <button type="submit" class="btn btn-success btn-lg">
+            <i class="bi bi-check-circle me-1"></i>Approve & Generate Bill
+          </button>
+          <a href="/Doctor/Appointments" class="btn btn-outline-secondary btn-lg">Cancel</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
